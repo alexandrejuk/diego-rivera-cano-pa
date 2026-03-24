@@ -35,9 +35,6 @@ export function HeroSection({ t, renderedAt }: Props) {
             {t.hero.secondaryCta}
           </a>
         </div>
-        <p className="text-xs text-zinc-500">
-          {t.hero.renderLabel} {renderedAt}
-        </p>
       </div>
 
       <div className="rounded-4xl">
