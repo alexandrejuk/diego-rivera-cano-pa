@@ -1,10 +1,24 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  Home,
+  ListOrdered,
+  Mail,
+  Menu,
+  MessageCircle,
+  MessagesSquare,
+  Newspaper,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
-import { navMobileItemClass, useNavActiveKey } from "@/components/landing/useNavActiveKey";
+import {
+  navMobileIconClass,
+  navMobileItemClass,
+  useNavActiveKey,
+} from "@/components/landing/useNavActiveKey";
 import type { Locale, SiteMessages } from "@/lib/i18n";
 
 type Props = {
@@ -81,14 +95,19 @@ export function NavbarMobileNav({ locale, t }: Props) {
                   <X className="h-6 w-6" strokeWidth={2} />
                 </button>
               </div>
-              <nav className="flex flex-1 flex-col overflow-y-auto px-4 py-4">
+              <nav className="flex flex-1 flex-col gap-0.5 overflow-y-auto px-3 py-4 sm:px-4">
                 <Link
                   href={`/${locale}`}
                   className={navMobileItemClass(active === "home")}
                   aria-current={active === "home" ? "page" : undefined}
                   onClick={close}
                 >
-                  {t.nav.home}
+                  <Home
+                    className={`h-5 w-5 shrink-0 ${navMobileIconClass(active === "home")}`}
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <span>{t.nav.home}</span>
                 </Link>
                 <Link
                   href={`/${locale}/servicos`}
@@ -96,7 +115,12 @@ export function NavbarMobileNav({ locale, t }: Props) {
                   aria-current={active === "services" ? "page" : undefined}
                   onClick={close}
                 >
-                  {t.nav.services}
+                  <BriefcaseBusiness
+                    className={`h-5 w-5 shrink-0 ${navMobileIconClass(active === "services")}`}
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <span>{t.nav.services}</span>
                 </Link>
                 <a
                   href={`/${locale}#process`}
@@ -104,7 +128,12 @@ export function NavbarMobileNav({ locale, t }: Props) {
                   aria-current={active === "process" ? "true" : undefined}
                   onClick={close}
                 >
-                  {t.nav.process}
+                  <ListOrdered
+                    className={`h-5 w-5 shrink-0 ${navMobileIconClass(active === "process")}`}
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <span>{t.nav.process}</span>
                 </a>
                 <a
                   href={`/${locale}#testimonials`}
@@ -112,7 +141,12 @@ export function NavbarMobileNav({ locale, t }: Props) {
                   aria-current={active === "testimonials" ? "true" : undefined}
                   onClick={close}
                 >
-                  {t.nav.testimonials}
+                  <MessagesSquare
+                    className={`h-5 w-5 shrink-0 ${navMobileIconClass(active === "testimonials")}`}
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <span>{t.nav.testimonials}</span>
                 </a>
                 <a
                   href={`/${locale}#contact`}
@@ -120,7 +154,12 @@ export function NavbarMobileNav({ locale, t }: Props) {
                   aria-current={active === "contact" ? "true" : undefined}
                   onClick={close}
                 >
-                  {t.nav.contact}
+                  <Mail
+                    className={`h-5 w-5 shrink-0 ${navMobileIconClass(active === "contact")}`}
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <span>{t.nav.contact}</span>
                 </a>
                 <Link
                   href={`/${locale}/noticias`}
@@ -129,15 +168,21 @@ export function NavbarMobileNav({ locale, t }: Props) {
                   aria-current={active === "news" ? "page" : undefined}
                   onClick={close}
                 >
-                  {t.nav.news}
+                  <Newspaper
+                    className={`h-5 w-5 shrink-0 ${navMobileIconClass(active === "news")}`}
+                    strokeWidth={2}
+                    aria-hidden
+                  />
+                  <span>{t.nav.news}</span>
                 </Link>
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex h-11 items-center justify-center rounded-full bg-emerald-500 px-5 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                  className="mt-3 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-emerald-500 px-5 text-sm font-semibold text-white transition hover:bg-emerald-600"
                   onClick={close}
                 >
+                  <MessageCircle className="h-5 w-5 shrink-0" strokeWidth={2} aria-hidden />
                   {t.whatsappStrip.buttonLabel}
                 </a>
               </nav>

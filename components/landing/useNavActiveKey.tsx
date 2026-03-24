@@ -45,8 +45,15 @@ export function navDesktopItemClass(active: boolean): string {
     : "text-zinc-600 transition hover:text-zinc-900";
 }
 
+/** Mobile drawer links: quiet default, clear current page without loud fills. */
 export function navMobileItemClass(active: boolean): string {
   const base =
-    "block rounded-xl px-4 py-3.5 text-base font-medium transition hover:bg-zinc-100 hover:text-zinc-950";
-  return active ? `${base} bg-amber-50 text-amber-950 ring-1 ring-amber-200/80` : `${base} text-zinc-800`;
+    "flex min-h-[3rem] items-center gap-3 rounded-lg border-l-[3px] px-3 py-2.5 text-[15px] leading-snug transition-colors duration-200 sm:px-4";
+  return active
+    ? `${base} border-amber-500 bg-zinc-100 text-zinc-900 font-semibold`
+    : `${base} border-transparent text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900`;
+}
+
+export function navMobileIconClass(active: boolean): string {
+  return active ? "text-amber-600" : "text-zinc-400";
 }
