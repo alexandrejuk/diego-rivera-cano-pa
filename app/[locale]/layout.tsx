@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { FooterSection } from "@/components/landing/FooterSection";
+import { FloatingWhatsAppButton } from "@/components/landing/FloatingWhatsAppButton";
 import { Navbar } from "@/components/landing/Navbar";
 import { ScrollRevealObserver } from "@/components/landing/ScrollRevealObserver";
 import { isValidLocale, messages, type Locale } from "@/lib/i18n";
@@ -24,6 +25,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <ScrollRevealObserver />
       <Navbar locale={locale} t={t} />
       <div className="flex flex-1 flex-col">{children}</div>
+      <FloatingWhatsAppButton locale={locale} t={t} />
       <FooterSection t={t} locale={locale} />
     </div>
   );

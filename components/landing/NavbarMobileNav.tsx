@@ -15,6 +15,7 @@ export function NavbarMobileNav({ locale, t }: Props) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const panelId = useId();
+  const whatsappUrl = "https://wa.me/50760700007?text=Hola%2C%20quiero%20agendar%20una%20consulta.";
 
   const close = useCallback(() => setOpen(false), []);
 
@@ -23,11 +24,16 @@ export function NavbarMobileNav({ locale, t }: Props) {
   }, []);
 
   useEffect(() => {
+    document.body.dataset.mobileMenuOpen = open ? "true" : "false";
+    window.dispatchEvent(new CustomEvent("mobile-menu-state", { detail: { open } }));
+
     if (!open) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = prev;
+      document.body.dataset.mobileMenuOpen = "false";
+      window.dispatchEvent(new CustomEvent("mobile-menu-state", { detail: { open: false } }));
     };
   }, [open]);
 
@@ -100,6 +106,15 @@ export function NavbarMobileNav({ locale, t }: Props) {
                 >
                   {t.nav.news}
                 </Link>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex h-11 items-center justify-center rounded-full bg-emerald-500 px-5 text-sm font-semibold text-white transition hover:bg-emerald-600"
+                  onClick={close}
+                >
+                  {t.whatsappStrip.buttonLabel}
+                </a>
               </nav>
             </div>,
             document.body,
