@@ -4,8 +4,8 @@ function SkeletonPulse({ className }: { className?: string }) {
   return <div className={`animate-pulse rounded-lg bg-zinc-200/80 ${className ?? ""}`} />;
 }
 
-/** Server-only skeleton; avoids segment `loading.tsx` + client nav bugs in Next 16. */
-export function NewsLoadingSkeleton() {
+/** Skeleton completo para `loading.tsx` do segmento (inclui faixa de título). */
+export function NewsPageShellSkeleton() {
   const t = messages[defaultLocale];
 
   return (
@@ -25,7 +25,6 @@ export function NewsLoadingSkeleton() {
 
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
         <SkeletonPulse className="mb-10 h-7 w-48 md:h-8" />
-
         <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm md:flex md:min-h-[300px]">
           <SkeletonPulse className="h-56 w-full shrink-0 md:h-auto md:w-[52%] md:min-h-[280px]" />
           <div className="flex flex-1 flex-col justify-center space-y-4 p-8 md:p-10">
@@ -44,7 +43,6 @@ export function NewsLoadingSkeleton() {
             </div>
           </div>
         </div>
-
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div

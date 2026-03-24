@@ -1,6 +1,5 @@
-import { NewsLoadingSkeleton } from "./news-loading-skeleton";
+import { NewsPageShellSkeleton } from "@/components/news/NewsPageShellSkeleton";
 
-/** Server Component — sem `params` (Next não passa em loading); skeleton usa locale default só no aria. */
 export default function Loading() {
-  return <NewsLoadingSkeleton />;
+  return <NewsPageShellSkeleton />;
 }

@@ -1,4 +1,3 @@
-import { unstable_noStore as noStore } from "next/cache";
 import { XMLParser } from "fast-xml-parser";
 
 type FeedSource = {
@@ -18,7 +17,7 @@ export type NewsItem = {
 
 const feedSources: FeedSource[] = [
   { name: "Reuters World", url: "https://feeds.reuters.com/Reuters/worldNews" },
-  { name: "BBC World", url: "http://feeds.bbci.co.uk/news/world/rss.xml" },
+  { name: "BBC World", url: "https://feeds.bbci.co.uk/news/world/rss.xml" },
   { name: "El Pais", url: "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada" },
   { name: "CNN en Espanol", url: "https://cnnespanol.cnn.com/feed/" },
 ];
@@ -188,12 +187,20 @@ type FeedFetchResult = {
   feedFailed: boolean;
 };
 
+const FEED_FETCH_MS = 25_000;
+
 async function fetchFeed(source: FeedSource): Promise<FeedFetchResult> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), FEED_FETCH_MS);
+
   try {
     const response = await fetch(source.url, {
       cache: "no-store",
+      signal: controller.signal,
       headers: {
-        "User-Agent": "NewsAggregator/1.0 (+https://www.diego-rivera-cano-advogado.com)",
+        Accept: "application/rss+xml, application/xml, application/atom+xml, text/xml;q=0.9, */*;q=0.8",
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
       },
     });
 
@@ -233,6 +240,8 @@ async function fetchFeed(source: FeedSource): Promise<FeedFetchResult> {
     return { items: mapped, feedFailed: false };
   } catch {
     return { items: [], feedFailed: true };
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 
@@ -263,7 +272,6 @@ function mergeAndSortNews(feedResults: FeedFetchResult[], limit: number): Aggreg
 }
 
 export async function getAggregatedNewsDetailed(limit = 24): Promise<AggregatedNewsResult> {
-  noStore();
   const results = await Promise.all(feedSources.map((source) => fetchFeed(source)));
   return mergeAndSortNews(results, limit);
 }
