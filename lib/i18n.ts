@@ -87,6 +87,21 @@ export type SiteMessages = {
     inputPlaceholder: string;
     buttonLabel: string;
   };
+  servicesPage: {
+    pageTitle: string;
+    kicker: string;
+    headline: string;
+    intro: string;
+    backHome: string;
+    highlightsTitle: string;
+    highlights: string[];
+    servicesTitle: string;
+    processTitle: string;
+    processSubtitle: string;
+    ctaTitle: string;
+    ctaDescription: string;
+    ctaButton: string;
+  };
   newsPage: {
     pageTitle: string;
     kicker: string;
@@ -406,6 +421,27 @@ export const messages: Record<Locale, SiteMessages> = {
         "Leave your email and we will contact you to schedule your first conversation.",
       inputPlaceholder: "Enter your email",
       buttonLabel: "Request contact",
+    },
+    servicesPage: {
+      pageTitle: "Services",
+      kicker: "Legal solutions in Panama",
+      headline: "Comprehensive legal services for investors, companies, and private clients.",
+      intro:
+        "We provide strategic support across real estate, corporate, contracts, and regulatory matters with execution focused on risk control and business clarity.",
+      backHome: "Back to home",
+      highlightsTitle: "Why clients choose our team",
+      highlights: [
+        "Cross-practice coordination in one legal team.",
+        "Clear timelines, communication, and execution standards.",
+        "Practical legal strategy aligned with business goals.",
+      ],
+      servicesTitle: "Practice areas",
+      processTitle: "How we deliver each engagement",
+      processSubtitle: "A disciplined process from first assessment through closing and post-closing follow-up.",
+      ctaTitle: "Need legal guidance for your case?",
+      ctaDescription:
+        "Speak directly with our office on WhatsApp to receive a first orientation and define next steps.",
+      ctaButton: "Speak on WhatsApp",
     },
     newsPage: {
       pageTitle: "News",
@@ -730,6 +766,27 @@ export const messages: Record<Locale, SiteMessages> = {
       inputPlaceholder: "Ingresa tu correo",
       buttonLabel: "Solicitar contacto",
     },
+    servicesPage: {
+      pageTitle: "Servicios",
+      kicker: "Soluciones legales en Panama",
+      headline: "Servicios legales integrales para inversionistas, empresas y clientes privados.",
+      intro:
+        "Brindamos acompanamiento estrategico en operaciones inmobiliarias, societarias, contractuales y regulatorias, con foco en control de riesgo y claridad de negocio.",
+      backHome: "Volver al inicio",
+      highlightsTitle: "Por que los clientes eligen nuestro equipo",
+      highlights: [
+        "Coordinacion legal integral en un solo despacho.",
+        "Ejecucion con tiempos claros y comunicacion constante.",
+        "Estrategia juridica practica orientada a resultados.",
+      ],
+      servicesTitle: "Areas de practica",
+      processTitle: "Como ejecutamos cada encargo",
+      processSubtitle: "Un metodo disciplinado desde la evaluacion inicial hasta el cierre y seguimiento posterior.",
+      ctaTitle: "Necesitas orientacion juridica para tu caso?",
+      ctaDescription:
+        "Habla directo con nuestra oficina por WhatsApp para recibir una primera orientacion y definir los proximos pasos.",
+      ctaButton: "Hablar por WhatsApp",
+    },
     newsPage: {
       pageTitle: "Noticias",
       kicker: "Seleccion editorial",
@@ -827,157 +884,157 @@ export const messages: Record<Locale, SiteMessages> = {
   pt: {
     dateLocale: "pt-BR",
     nav: {
-      home: "Inicio",
-      services: "Servicos",
+      home: "Início",
+      services: "Serviços",
       process: "Processo",
       testimonials: "Depoimentos",
       contact: "Contato",
-      news: "Noticias",
+      news: "Notícias",
       menuTitle: "Menu",
       menuOpen: "Abrir menu",
       menuClose: "Fechar menu",
     },
     hero: {
-      badge: "Panama · Imobiliario, investimento e societario",
-      title: "Estrategia juridica para operacoes imobiliarias, investimento estrangeiro e empresas.",
+      badge: "Panamá · Imobiliário, investimento e societário",
+      title: "Estratégia jurídica para operações imobiliárias, investimento estrangeiro e empresas.",
       description:
-        "Assessoria transacional e societaria: imoveis, investimento inbound, contratos, coordenacao bancaria e tramites regulatorios, do due diligence ao fechamento.",
+        "Assessoria transacional e societária: imóveis, investimento inbound, contratos, coordenação bancária e trâmites regulatórios, do due diligence ao fechamento.",
       primaryCta: "Agendar consulta",
       secondaryCta: "Ligar agora",
-      stats: ["+12 anos no Panama", "Fechamentos e registros", "Investidores e incorporadores"],
-      renderLabel: "Pagina renderizada no servidor (SSR). Ultima atualizacao:",
+      stats: ["+12 anos no Panamá", "Fechamentos e registros", "Investidores e incorporadores"],
+      renderLabel: "Página renderizada no servidor (SSR). Última atualização:",
     },
     metricsStrip: {
       items: [
         { value: "+1.200", label: "Clientes atendidos" },
-        { value: "+2.800", label: "Consultas juridicas" },
-        { value: "96%", label: "Satisfacao dos clientes" },
-        { value: "24h", label: "Tempo medio de primeira resposta" },
+        { value: "+2.800", label: "Consultas jurídicas" },
+        { value: "96%", label: "Satisfação dos clientes" },
+        { value: "24h", label: "Tempo médio de primeira resposta" },
       ],
     },
     benefitsSection: {
-      title: "Beneficios da nossa assessoria juridica",
+      title: "Benefícios da nossa assessoria jurídica",
       items: [
         {
-          title: "Estrategia clara",
+          title: "Estratégia clara",
           description:
-            "Entenda suas opcoes e o melhor caminho juridico desde o primeiro contato.",
+            "Entenda suas opções e o melhor caminho jurídico desde o primeiro contato.",
         },
         {
-          title: "Comunicacao pratica",
+          title: "Comunicação prática",
           description:
-            "Receba atualizacoes simples, expectativas realistas e proximos passos.",
+            "Receba atualizações simples, expectativas realistas e próximos passos.",
         },
         {
-          title: "Acompanhamento especialista",
+          title: "Acompanhamento especializado",
           description:
-            "Conducao de negociacao e litigio com foco tecnico e precisao.",
+            "Condução de negociação e litígio com foco técnico e precisão.",
         },
         {
-          title: "Retorno rapido",
+          title: "Retorno rápido",
           description:
-            "Tenha uma primeira orientacao em pouco tempo para agir com seguranca.",
+            "Tenha uma primeira orientação em pouco tempo para agir com segurança.",
         },
       ],
     },
     serviceSection: {
       headlinePrefix: "Seu",
-      headlineAccent: "parceiro juridico",
-      headlineSuffix: "para imoveis, investimento e negocios no Panama.",
+      headlineAccent: "parceiro jurídico",
+      headlineSuffix: "para imóveis, investimento e negócios no Panamá.",
       subtitle:
-        "Integramos imoveis, investimento internacional, direito societario, contratos, coordenacao bancaria e tramites regulatorios, da estruturacao ao fechamento.",
-      listHeading: "Nossos servicos",
+        "Integramos operações imobiliárias, investimento internacional, direito societário, contratos, coordenação bancária e trâmites regulatórios, da estruturação ao fechamento.",
+      listHeading: "Nossos serviços",
       ctaLabel: "Agendar consulta",
-      imageAlt: "Assessoria juridica e apoio profissional no Panama",
+      imageAlt: "Assessoria jurídica e apoio profissional no Panamá",
       items: [
         {
-          title: "Transacoes imobiliarias e assessoria",
+          title: "Transações imobiliárias e assessoria",
           points: [
-            "Revisao e negociacao de promessas de compra e venda",
-            "Due diligence juridica de imoveis",
-            "Estruturacao de aquisicoes (pessoais ou corporativas)",
-            "Assessoria em projetos em regime de propriedade horizontal e regime turistico",
-            "Acompanhamento em fechamentos (cartorio e registro publico)",
-            "Tramitacao de escrituras publicas e transferencia de propriedade",
+            "Revisão e negociação de promessas de compra e venda",
+            "Due diligence jurídica de imóveis",
+            "Estruturação de aquisições (pessoais ou corporativas)",
+            "Assessoria em projetos em regime de propriedade horizontal e regime turístico",
+            "Acompanhamento em fechamentos (cartório e registro público)",
+            "Tramitação de escrituras públicas e transferência de propriedade",
           ],
         },
         {
-          title: "Investimento estrangeiro e estruturacao (entrada no Panama)",
+          title: "Investimento estrangeiro e estruturação (entrada no Panamá)",
           points: [
-            "Assessoria juridica a investidores estrangeiros no Panama",
-            "Estruturacao de investimentos via sociedades locais ou entidades estrangeiras",
-            "Registro de entidades estrangeiras como filiais no Panama",
-            "Definicao de estruturas de titularidade de ativos",
-            "Coordenacao com bancos, incorporadores e fornecedores locais",
+            "Assessoria jurídica para investidores estrangeiros no Panamá",
+            "Estruturação de investimentos via sociedades locais ou entidades estrangeiras",
+            "Registro de entidades estrangeiras como filiais no Panamá",
+            "Definição de estruturas de titularidade de ativos",
+            "Coordenação com bancos, incorporadores e fornecedores locais",
           ],
         },
         {
-          title: "Direito societario e comercial",
+          title: "Direito societário e comercial",
           points: [
-            "Constituicao de sociedades (S.A., S.R.L.)",
-            "Redacao de pactos sociais e acordos corporativos",
-            "Assessoria juridica societaria continua",
-            "Elaboracao e revisao de contratos comerciais",
-            "Reorganizacao e estruturacao societaria",
+            "Constituição de sociedades (S.A., S.R.L.)",
+            "Redação de pactos sociais e acordos corporativos",
+            "Assessoria jurídica societária contínua",
+            "Elaboração e revisão de contratos comerciais",
+            "Reorganização e estruturação societária",
           ],
         },
         {
-          title: "Redacao e negociacao de contratos",
+          title: "Redação e negociação de contratos",
           points: [
-            "Redacao e revisao de contratos de compra e venda",
-            "Contratos de locacao",
-            "Contratos de administracao de propriedades (property management)",
+            "Redação e revisão de contratos de compra e venda",
+            "Contratos de locação",
+            "Contratos de administração de propriedades (property management)",
             "Acordos comerciais e civis",
-            "Negociacao estrategica de termos contratuais",
+            "Negociação estratégica de termos contratuais",
           ],
         },
         {
-          title: "Suporte juridico bancario e transacional",
+          title: "Suporte jurídico bancário e transacional",
           points: [
-            "Assistencia na abertura de contas bancarias no Panama",
-            "Coordenacao juridica com instituicoes bancarias",
-            "Acompanhamento de fundos em transacoes imobiliarias",
+            "Assistência na abertura de contas bancárias no Panamá",
+            "Coordenação jurídica com instituições bancárias",
+            "Acompanhamento de fundos em transações imobiliárias",
             "Suporte em processos de financiamento",
           ],
         },
         {
-          title: "Processos regulatorios e governamentais",
+          title: "Processos regulatórios e governamentais",
           points: [
-            "Gestao de tramites perante orgaos governamentais",
-            "Assessoria e tramitacao de avisos de operacao",
-            "Coordenacao com autoridades regulatorias (MICI, Ministerio de Ambiente, entre outros)",
-            "Gestao de permissoes ligados a investimento e desenvolvimento",
+            "Gestão de trâmites perante órgãos governamentais",
+            "Assessoria e tramitação de avisos de operação",
+            "Coordenação com autoridades regulatórias (MICI, Ministério de Ambiente, entre outros)",
+            "Gestão de permissões ligadas a investimento e desenvolvimento",
           ],
         },
         {
-          title: "Suporte juridico ponta a ponta para investidores",
+          title: "Suporte jurídico ponta a ponta para investidores",
           points: [
-            "Acompanhamento integral a investidores desde a entrada no Panama",
-            "Coordenacao completa do processo de investimento imobiliario",
-            "Integracao de servicos juridicos, corporativos e transacionais",
-            "Seguimento continuo ate o fechamento e pos-fechamento da operacao",
+            "Acompanhamento integral aos investidores desde a entrada no Panamá",
+            "Coordenação completa do processo de investimento imobiliário",
+            "Integração de serviços jurídicos, corporativos e transacionais",
+            "Acompanhamento contínuo até o fechamento e o pós-fechamento da operação",
           ],
         },
       ],
     },
     processSection: {
       title: "Como trabalhamos",
-      subtitle: "Um processo transparente para gerar seguranca e resultado.",
+      subtitle: "Um processo transparente para gerar segurança e resultados.",
       steps: [
         {
-          title: "1. Analise inicial",
+          title: "1. Análise inicial",
           description:
-            "Entendemos seu contexto, objetivos e urgencia para definir a melhor estrategia.",
+            "Entendemos seu contexto, objetivos e urgência para definir a melhor estratégia.",
         },
         {
-          title: "2. Plano juridico",
+          title: "2. Plano jurídico",
           description:
-            "Voce recebe um plano claro com alternativas, prazos e recomendacoes.",
+            "Você recebe um plano claro com alternativas, prazos e recomendações.",
         },
         {
-          title: "3. Acompanhamento continuo",
+          title: "3. Acompanhamento contínuo",
           description:
-            "Conduzimos negociacao ou litigio com atualizacoes constantes.",
+            "Conduzimos negociação ou litígio com atualizações constantes.",
         },
       ],
     },
@@ -986,149 +1043,170 @@ export const messages: Record<Locale, SiteMessages> = {
       items: [
         {
           name: "Maria Gonzalez",
-          role: "Empresaria",
+          role: "Empresária",
           quote:
-            "Recebi orientacao clara e acao rapida. Todo o processo foi organizado e profissional.",
+            "Recebi orientação clara e ação rápida. Todo o processo foi organizado e profissional.",
         },
         {
           name: "Carlos Mejia",
           role: "Cliente particular",
           quote:
-            "Excelente comunicacao e expectativas realistas. Sempre soube o proximo passo.",
+            "Excelente comunicação e expectativas realistas. Sempre soube o próximo passo.",
         },
         {
           name: "Ana Rojas",
           role: "Empreendedora",
           quote:
-            "A estrategia juridica ajudou a resolver um conflito complexo com confianca.",
+            "A estratégia jurídica ajudou a resolver um conflito complexo com confiança.",
         },
       ],
     },
     faqSection: {
       title: "Perguntas frequentes",
       subtitle:
-        "Duvidas comuns de clientes no Panama sobre servicos juridicos.",
+        "Dúvidas comuns de clientes no Panamá sobre serviços jurídicos.",
       items: [
         {
           question: "Como agendo a primeira consulta?",
           answer:
-            "Voce pode entrar em contato por telefone ou e-mail e enviamos o primeiro horario disponivel.",
+            "Você pode entrar em contato por telefone ou e-mail e enviamos o primeiro horário disponível.",
         },
         {
-          question: "Quais documentos devo levar para a primeira reuniao?",
+          question: "Quais documentos devo levar para a primeira reunião?",
           answer:
-            "Leve seu documento e qualquer contrato, notificacao, recibo, documento judicial ou mensagem ligada ao caso.",
+            "Leve seu documento e qualquer contrato, notificação, recibo, documento judicial ou mensagem ligada ao caso.",
         },
         {
-          question: "Vocês atendem apenas na Cidade do Panama?",
+          question: "Vocês atendem apenas na Cidade do Panamá?",
           answer:
-            "Nao. Atendemos clientes em diferentes regioes do Panama e tambem com acompanhamento remoto quando aplicavel.",
+            "Não. Atendemos clientes em diferentes regiões do Panamá e também com acompanhamento remoto quando aplicável.",
         },
         {
-          question: "Quanto custa uma consulta juridica?",
+          question: "Quanto custa uma consulta jurídica?",
           answer:
-            "O valor varia conforme a complexidade do caso. Informamos o custo com clareza antes da confirmacao.",
+            "O valor varia conforme a complexidade do caso. Informamos o custo com clareza antes da confirmação.",
         },
         {
-          question: "Quais formas de pagamento voces aceitam?",
+          question: "Quais formas de pagamento vocês aceitam?",
           answer:
-            "Aceitamos pagamento com cartao, efetivo e transferencia bancaria. As condicoes sao confirmadas antes de iniciar o servico.",
+            "Aceitamos pagamento com cartão, dinheiro e transferência bancária. As condições são confirmadas antes de iniciar o serviço.",
         },
         {
-          question: "Quanto tempo pode durar um processo legal no Panama?",
+          question: "Quanto tempo pode durar um processo legal no Panamá?",
           answer:
-            "Depende do tipo de demanda e do calendario do tribunal. Apos analisar o caso, passamos uma previsao realista.",
+            "Depende do tipo de demanda e do calendário do tribunal. Após analisar o caso, passamos uma previsão realista.",
         },
       ],
     },
     whatsappStrip: {
-      title: "Precisa de orientacao juridica imediata?",
+      title: "Precisa de orientação jurídica imediata?",
       description: "Fale agora com nossa equipe pelo WhatsApp.",
       buttonLabel: "Falar no WhatsApp",
     },
     ctaSection: {
-      title: "Solicite orientacao juridica",
+      title: "Solicite orientação jurídica",
       description:
         "Compartilhe seu e-mail e entraremos em contato para agendar a primeira conversa.",
       inputPlaceholder: "Digite seu e-mail",
       buttonLabel: "Solicitar contato",
     },
-    newsPage: {
-      pageTitle: "Noticias",
-      kicker: "Selecao editorial",
-      headline: "Manchetes de veiculos de confianca",
+    servicesPage: {
+      pageTitle: "Serviços",
+      kicker: "Soluções jurídicas no Panamá",
+      headline: "Serviços jurídicos completos para investidores, empresas e clientes privados.",
       intro:
-        "Um digest profissional de noticias internacionais via RSS, atualizado com frequencia para voce acompanhar o essencial em um so lugar.",
+        "Oferecemos assessoria estratégica em operações imobiliárias, societárias, contratuais e regulatórias, com foco no controle de risco e na clareza para a tomada de decisão.",
+      backHome: "Voltar ao início",
+      highlightsTitle: "Por que os clientes escolhem nossa equipe",
+      highlights: [
+        "Coordenação jurídica integrada em um único escritório.",
+        "Execução com prazos claros e comunicação objetiva.",
+        "Estratégia jurídica prática orientada a resultados.",
+      ],
+      servicesTitle: "Áreas de atuação",
+      processTitle: "Como conduzimos cada demanda",
+      processSubtitle: "Método disciplinado desde o diagnóstico inicial até o fechamento e o acompanhamento posterior.",
+      ctaTitle: "Precisa de orientação jurídica para o seu caso?",
+      ctaDescription:
+        "Fale diretamente com nosso escritório no WhatsApp para receber uma primeira orientação e definir os próximos passos.",
+      ctaButton: "Falar no WhatsApp",
+    },
+    newsPage: {
+      pageTitle: "Notícias",
+      kicker: "Seleção editorial",
+      headline: "Manchetes de veículos de confiança",
+      intro:
+        "Um digest profissional de notícias internacionais via RSS, atualizado com frequência para você acompanhar o essencial em um só lugar.",
       featuredLabel: "Destaque",
       readOnSource: "Ler na fonte",
-      excerptFallback: "Abra a materia no portal do veiculo para o texto completo.",
+      excerptFallback: "Abra a matéria no portal do veículo para o texto completo.",
       emptyState:
-        "Nenhuma materia disponivel no momento. Tente novamente em alguns minutos.",
-      backHome: "Voltar ao inicio",
-      lastUpdatedLabel: "Pagina atualizada",
+        "Nenhuma matéria disponível no momento. Tente novamente em alguns minutos.",
+      backHome: "Voltar ao início",
+      lastUpdatedLabel: "Página atualizada",
       latestSectionTitle: "Mais recentes",
       featuredBlockHeading: "Destaque {{n}}",
-      loadErrorTitle: "Nao foi possivel carregar as noticias",
+      loadErrorTitle: "Não foi possível carregar as notícias",
       loadErrorDescription:
-        "As fontes RSS podem estar fora do ar ou indisponiveis. Voce sera redirecionado para a pagina inicial em instantes.",
-      loadErrorRedirect: "Redirecionando para o inicio em {{seconds}} segundos.",
-      loadErrorGoNow: "Ir ao inicio agora",
-      loadingAria: "Carregando noticias",
+        "As fontes RSS podem estar fora do ar ou indisponíveis. Você será redirecionado para a página inicial em instantes.",
+      loadErrorRedirect: "Redirecionando para o início em {{seconds}} segundos.",
+      loadErrorGoNow: "Ir ao início agora",
+      loadingAria: "Carregando notícias",
       marketSection: {
         title: "Resumo da bolsa",
-        subtitle: "Acompanhe os principais indices em tempo real por fontes confiaveis.",
-        followLabel: "Ver indice",
-        note: "Referencia informativa de mercado; nao constitui assessoria juridica nem de investimento.",
+        subtitle: "Acompanhe os principais índices em tempo real por fontes confiáveis.",
+        followLabel: "Ver índice",
+        note: "Referência informativa de mercado; não constitui assessoria jurídica nem de investimento.",
       },
       marketTicker: {
         label: "Mercados EUA",
         delayedLabel: "Dados com atraso",
       },
       weatherSection: {
-        title: "Previsao do tempo local",
-        subtitle: "Permita geolocalizacao para ver condicoes atuais e previsao dos proximos dias.",
-        locateButton: "Usar minha localizacao",
-        loading: "Carregando previsao...",
-        unsupported: "Seu navegador nao suporta geolocalizacao.",
-        denied: "Permissao de localizacao negada. Ative para ver o clima local.",
-        failed: "Nao foi possivel carregar o clima para sua localizacao.",
-        locationLabel: "Localizacao",
+        title: "Previsão do tempo local",
+        subtitle: "Permita geolocalização para ver condições atuais e previsão dos próximos dias.",
+        locateButton: "Usar minha localização",
+        loading: "Carregando previsão...",
+        unsupported: "Seu navegador não suporta geolocalização.",
+        denied: "Permissão de localização negada. Ative para ver o clima local.",
+        failed: "Não foi possível carregar o clima para sua localização.",
+        locationLabel: "Localização",
         todayLabel: "Hoje",
         updatedLabel: "Atualizado",
       },
       legalCtaBanner: {
-        title: "Precisa de orientacao juridica para o seu caso?",
+        title: "Precisa de orientação jurídica para o seu caso?",
         description:
-          "Nossa equipe pode analisar sua situacao e indicar os proximos passos para sua estrategia juridica no Panama.",
+          "Nossa equipe pode analisar sua situação e indicar os próximos passos para sua estratégia jurídica no Panamá.",
         buttonLabel: "Falar no WhatsApp",
       },
     },
     systemPages: {
       notFound: {
         code: "404",
-        title: "Pagina nao encontrada",
+        title: "Página não encontrada",
         description:
-          "A pagina que voce procura nao existe ou foi movida. Confira o endereco ou volte ao inicio.",
-        cta: "Voltar ao inicio",
+          "A página que você procura não existe ou foi movida. Confira o endereço ou volte ao início.",
+        cta: "Voltar ao início",
       },
       error500: {
         code: "500",
         title: "Algo deu errado",
         description:
-          "Ocorreu um erro inesperado. Voce pode tentar de novo ou aguardar a redirecao automatica.",
-        redirect: "Redirecionando para o inicio em {{seconds}} segundos.",
-        goNow: "Ir ao inicio agora",
+          "Ocorreu um erro inesperado. Você pode tentar de novo ou aguardar a redireção automática.",
+        redirect: "Redirecionando para o início em {{seconds}} segundos.",
+        goNow: "Ir ao início agora",
         tryAgain: "Tentar novamente",
       },
     },
     footer: {
       brandTitle: "Diego Rivera Cano",
       brandDescription:
-        "Assessoria juridica no Panama em imoveis, investimento estrangeiro, direito societario, contratos, suporte bancario e processos regulatorios.",
+        "Assessoria jurídica no Panamá em imóveis, investimento estrangeiro, direito societário, contratos, suporte bancário e processos regulatórios.",
       sections: {
         company: {
           title: "Empresa",
-          links: ["Servicos", "Comunidade", "Depoimentos"],
+          links: ["Serviços", "Comunidade", "Depoimentos"],
         },
         support: {
           title: "Suporte",

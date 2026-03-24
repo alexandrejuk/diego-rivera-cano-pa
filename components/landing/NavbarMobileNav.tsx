@@ -80,9 +80,9 @@ export function NavbarMobileNav({ locale, t }: Props) {
                 <Link href={`/${locale}`} className={linkClass} onClick={close}>
                   {t.nav.home}
                 </Link>
-                <a href={`/${locale}#services`} className={linkClass} onClick={close}>
+                <Link href={`/${locale}/servicos`} className={linkClass} onClick={close}>
                   {t.nav.services}
-                </a>
+                </Link>
                 <a href={`/${locale}#process`} className={linkClass} onClick={close}>
                   {t.nav.process}
                 </a>

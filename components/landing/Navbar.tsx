@@ -15,7 +15,7 @@ export function Navbar({ locale, t }: Props) {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href={`/${locale}`}
-          className="flex shrink-0 items-center transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
+          className="flex shrink-0 items-center transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
         >
           <span className="flex w-full h-full items-center justify-center overflow-hidden rounded-full p-1">
             <Image
@@ -33,9 +33,9 @@ export function Navbar({ locale, t }: Props) {
           <Link href={`/${locale}`} className="hover:text-zinc-900">
             {t.nav.home}
           </Link>
-          <a href={`/${locale}#services`} className="hover:text-zinc-900">
+          <Link href={`/${locale}/servicos`} className="hover:text-zinc-900">
             {t.nav.services}
-          </a>
+          </Link>
           <a href={`/${locale}#process`} className="hover:text-zinc-900">
             {t.nav.process}
           </a>
