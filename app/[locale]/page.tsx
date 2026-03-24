@@ -1,11 +1,13 @@
 import { notFound } from "next/navigation";
 import { BenefitsSection } from "@/components/landing/BenefitsSection";
 import { ContactCtaSection } from "@/components/landing/ContactCtaSection";
+import { FaqSection } from "@/components/landing/FaqSection";
 import { FooterSection } from "@/components/landing/FooterSection";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { MetricsStripSection } from "@/components/landing/MetricsStripSection";
 import { Navbar } from "@/components/landing/Navbar";
 import { ProcessSection } from "@/components/landing/ProcessSection";
+import { ScrollRevealObserver } from "@/components/landing/ScrollRevealObserver";
 import { ServicesSection } from "@/components/landing/ServicesSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { isValidLocale, locales, messages, type Locale } from "@/lib/i18n";
@@ -35,7 +37,8 @@ export default async function LocalizedHome({ params }: Props) {
   }).format(new Date());
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#faf7ff]">
+    <div className="flex min-h-screen flex-col bg-[#f6f5f3]">
+      <ScrollRevealObserver />
       <Navbar locale={locale} t={t} />
       <HeroSection t={t} renderedAt={today} />
       <MetricsStripSection t={t} />
@@ -43,6 +46,7 @@ export default async function LocalizedHome({ params }: Props) {
       <ServicesSection t={t} />
       <ProcessSection t={t} />
       <TestimonialsSection t={t} />
+      <FaqSection t={t} />
       <ContactCtaSection t={t} />
       <FooterSection t={t} />
     </div>

@@ -6,7 +6,7 @@ type Props = {
 
 export function ServicesSection({ t }: Props) {
   return (
-    <section id="services" className="mx-auto w-full max-w-6xl px-6 py-14 md:py-20">
+    <section id="services" className="section-reveal mx-auto w-full max-w-6xl px-6 py-14 md:py-20">
       <div className="mb-8 space-y-3">
         <h2 className="text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
           {t.serviceSection.title}

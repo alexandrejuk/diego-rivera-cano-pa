@@ -7,9 +7,9 @@ type Props = {
 
 export function HeroSection({ t, renderedAt }: Props) {
   return (
-    <section className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
+    <section className="section-reveal reveal-delay-1 mx-auto grid w-full max-w-6xl gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
       <div className="space-y-6">
-        <span className="inline-flex rounded-full bg-fuchsia-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-fuchsia-700">
+        <span className="inline-flex rounded-full bg-amber-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-800">
           {t.hero.badge}
         </span>
         <h1 className="text-4xl font-black tracking-tight text-zinc-900 md:text-6xl">
@@ -35,12 +35,12 @@ export function HeroSection({ t, renderedAt }: Props) {
         </p>
       </div>
 
-      <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-400 p-8 text-white shadow-xl">
+      <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-slate-950 via-slate-900 to-slate-800 p-8 text-white shadow-xl">
         <div className="space-y-5">
           {t.hero.stats.map((stat) => (
             <div
               key={stat}
-              className="rounded-2xl border border-white/25 bg-white/15 p-4 text-sm font-medium backdrop-blur"
+              className="rounded-2xl border border-white/20 bg-white/10 p-4 text-sm font-medium backdrop-blur"
             >
               {stat}
             </div>

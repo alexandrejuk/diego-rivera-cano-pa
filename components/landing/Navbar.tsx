@@ -8,7 +8,7 @@ type Props = {
 
 export function Navbar({ locale, t }: Props) {
   return (
-    <header className="sticky top-0 z-20 border-b border-white/60 bg-white/85 backdrop-blur">
+    <header className="section-reveal sticky top-0 z-20 border-b border-white/60 bg-white/85 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <div className="text-xl font-black tracking-tight text-zinc-900">DRC</div>
         <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">

@@ -6,7 +6,7 @@ type Props = {
 
 export function ProcessSection({ t }: Props) {
   return (
-    <section id="process" className="bg-zinc-900 py-14 text-zinc-100 md:py-20">
+    <section id="process" className="section-reveal bg-zinc-900 py-14 text-zinc-100 md:py-20">
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="mb-8 space-y-3">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">

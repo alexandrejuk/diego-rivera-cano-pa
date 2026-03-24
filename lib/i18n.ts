@@ -58,6 +58,14 @@ export type SiteMessages = {
       quote: string;
     }>;
   };
+  faqSection: {
+    title: string;
+    subtitle: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
   ctaSection: {
     title: string;
     description: string;
@@ -207,6 +215,42 @@ export const messages: Record<Locale, SiteMessages> = {
         },
       ],
     },
+    faqSection: {
+      title: "Frequently asked questions",
+      subtitle: "Common questions from clients in Panama about legal services.",
+      items: [
+        {
+          question: "How do I schedule the first consultation?",
+          answer:
+            "You can contact us by phone or email and we will offer the earliest available time slot.",
+        },
+        {
+          question: "What documents should I bring to the first meeting?",
+          answer:
+            "Bring your ID and any contracts, notices, receipts, court documents, or messages related to your case.",
+        },
+        {
+          question: "Do you assist only in Panama City?",
+          answer:
+            "No. We serve clients in different regions of Panama, including remote follow-up when possible.",
+        },
+        {
+          question: "How much does a legal consultation cost?",
+          answer:
+            "The consultation fee depends on the case complexity. We always explain the cost clearly before confirming the appointment.",
+        },
+        {
+          question: "Which payment methods do you accept?",
+          answer:
+            "We accept card payments, cash, and bank transfer. Payment terms are confirmed before starting the service.",
+        },
+        {
+          question: "How long can a legal process take in Panama?",
+          answer:
+            "It depends on the type of claim and court schedule. After reviewing your case, we provide an estimated timeline.",
+        },
+      ],
+    },
     ctaSection: {
       title: "Request legal orientation",
       description:
@@ -221,7 +265,7 @@ export const messages: Record<Locale, SiteMessages> = {
       sections: {
         company: {
           title: "Company",
-          links: ["About us", "Services", "Community", "Testimonials"],
+          links: ["Services", "Community", "Testimonials"],
         },
         support: {
           title: "Support",
@@ -356,6 +400,43 @@ export const messages: Record<Locale, SiteMessages> = {
         },
       ],
     },
+    faqSection: {
+      title: "Preguntas frecuentes",
+      subtitle:
+        "Dudas comunes de clientes en Panama sobre servicios legales.",
+      items: [
+        {
+          question: "Como agendo la primera consulta?",
+          answer:
+            "Puedes escribirnos por telefono o correo y te compartimos el primer horario disponible.",
+        },
+        {
+          question: "Que documentos debo llevar a la primera cita?",
+          answer:
+            "Trae tu cedula y cualquier contrato, notificacion, recibo, escrito judicial o mensaje relacionado con tu caso.",
+        },
+        {
+          question: "Solo atienden en Ciudad de Panama?",
+          answer:
+            "No. Atendemos clientes en distintas zonas de Panama y tambien con seguimiento remoto cuando aplica.",
+        },
+        {
+          question: "Cuanto cuesta una consulta legal?",
+          answer:
+            "El valor depende del nivel de complejidad del caso. Siempre te informamos el costo antes de confirmar la cita.",
+        },
+        {
+          question: "Que metodos de pago aceptan?",
+          answer:
+            "Aceptamos pago con tarjeta, efectivo y transferencia bancaria. Las condiciones se confirman antes de iniciar el servicio.",
+        },
+        {
+          question: "Cuanto tiempo puede tardar un proceso legal en Panama?",
+          answer:
+            "Depende del tipo de caso y del calendario judicial. Tras revisar tu situacion te damos una estimacion realista.",
+        },
+      ],
+    },
     ctaSection: {
       title: "Solicita orientacion legal",
       description:
@@ -370,7 +451,7 @@ export const messages: Record<Locale, SiteMessages> = {
       sections: {
         company: {
           title: "Empresa",
-          links: ["Sobre nosotros", "Servicios", "Comunidad", "Testimonios"],
+          links: ["Servicios", "Comunidad", "Testimonios"],
         },
         support: {
           title: "Soporte",
@@ -505,6 +586,43 @@ export const messages: Record<Locale, SiteMessages> = {
         },
       ],
     },
+    faqSection: {
+      title: "Perguntas frequentes",
+      subtitle:
+        "Duvidas comuns de clientes no Panama sobre servicos juridicos.",
+      items: [
+        {
+          question: "Como agendo a primeira consulta?",
+          answer:
+            "Voce pode entrar em contato por telefone ou e-mail e enviamos o primeiro horario disponivel.",
+        },
+        {
+          question: "Quais documentos devo levar para a primeira reuniao?",
+          answer:
+            "Leve seu documento e qualquer contrato, notificacao, recibo, documento judicial ou mensagem ligada ao caso.",
+        },
+        {
+          question: "Vocês atendem apenas na Cidade do Panama?",
+          answer:
+            "Nao. Atendemos clientes em diferentes regioes do Panama e tambem com acompanhamento remoto quando aplicavel.",
+        },
+        {
+          question: "Quanto custa uma consulta juridica?",
+          answer:
+            "O valor varia conforme a complexidade do caso. Informamos o custo com clareza antes da confirmacao.",
+        },
+        {
+          question: "Quais formas de pagamento voces aceitam?",
+          answer:
+            "Aceitamos pagamento com cartao, efetivo e transferencia bancaria. As condicoes sao confirmadas antes de iniciar o servico.",
+        },
+        {
+          question: "Quanto tempo pode durar um processo legal no Panama?",
+          answer:
+            "Depende do tipo de demanda e do calendario do tribunal. Apos analisar o caso, passamos uma previsao realista.",
+        },
+      ],
+    },
     ctaSection: {
       title: "Solicite orientacao juridica",
       description:
@@ -519,7 +637,7 @@ export const messages: Record<Locale, SiteMessages> = {
       sections: {
         company: {
           title: "Empresa",
-          links: ["Sobre nos", "Servicos", "Comunidade", "Depoimentos"],
+          links: ["Servicos", "Comunidade", "Depoimentos"],
         },
         support: {
           title: "Suporte",

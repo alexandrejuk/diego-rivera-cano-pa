@@ -6,8 +6,8 @@ type Props = {
 
 export function ContactCtaSection({ t }: Props) {
   return (
-    <section id="contact" className="mx-auto w-full max-w-6xl px-6 pb-16 md:pb-24">
-      <div className="rounded-[2rem] bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-400 p-8 text-white shadow-lg md:p-10">
+    <section id="contact" className="section-reveal mx-auto w-full max-w-6xl px-6 pb-16 md:pb-24">
+      <div className="rounded-4xl bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 p-8 text-white shadow-lg md:p-10">
         <h2 className="text-2xl font-bold tracking-tight md:text-3xl">{t.ctaSection.title}</h2>
         <p className="mt-3 max-w-2xl text-sm text-white/90 md:text-base">
           {t.ctaSection.description}
@@ -20,7 +20,7 @@ export function ContactCtaSection({ t }: Props) {
           />
           <button
             type="submit"
-            className="h-12 rounded-full bg-zinc-900 px-6 text-sm font-semibold text-white transition hover:bg-zinc-700"
+            className="h-12 rounded-full bg-amber-500 px-6 text-sm font-semibold text-zinc-900 transition hover:bg-amber-400"
           >
             {t.ctaSection.buttonLabel}
           </button>
