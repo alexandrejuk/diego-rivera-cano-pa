@@ -19,13 +19,14 @@ export const metadata: Metadata = {
     template: "%s | Diego Rivera Cano",
   },
   description:
-    "Bufete de abogados con atencion personalizada en derecho civil, familia y consumidor en Panama.",
+    "Asesoria legal en Panama: bienes raices, inversion extranjera, derecho societario, contratos, apoyo bancario y tramites regulatorios.",
   keywords: [
     "abogado en Panama",
     "bufete de abogados",
-    "derecho civil",
-    "derecho de familia",
-    "derecho del consumidor",
+    "bienes raices Panama",
+    "inversion extranjera Panama",
+    "derecho societario Panama",
+    "contratos comerciales Panama",
   ],
   alternates: {
     canonical: "/",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Diego Rivera Cano | Abogado",
     description:
-      "Atencion legal cercana con enfoque estrategico y resultados para clientes en Panama.",
+      "Operaciones inmobiliarias, inversion extranjera y asesoria societaria y transaccional en Panama.",
     url: "/",
     siteName: "Diego Rivera Cano Abogado",
     locale: "es_PA",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Diego Rivera Cano | Abogado",
     description:
-      "Atencion legal cercana con enfoque estrategico y resultados para clientes en Panama.",
+      "Operaciones inmobiliarias, inversion extranjera y asesoria societaria y transaccional en Panama.",
   },
   robots: {
     index: true,

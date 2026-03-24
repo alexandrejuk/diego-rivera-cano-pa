@@ -37,11 +37,16 @@ export type SiteMessages = {
     }>;
   };
   serviceSection: {
-    title: string;
+    headlinePrefix: string;
+    headlineAccent: string;
+    headlineSuffix: string;
     subtitle: string;
+    listHeading: string;
+    ctaLabel: string;
+    imageAlt: string;
     items: Array<{
       title: string;
-      description: string;
+      points: string[];
     }>;
   };
   processSection: {
@@ -155,13 +160,13 @@ export const messages: Record<Locale, SiteMessages> = {
       news: "News",
     },
     hero: {
-      badge: "Panama City Legal Boutique",
-      title: "Strategic legal support for people and businesses.",
+      badge: "Panama · Real estate, investors & corporate",
+      title: "Legal strategy for property deals, foreign investment, and companies.",
       description:
-        "A modern and human-centered law practice focused on civil, family, and consumer matters with clear communication and practical guidance.",
+        "Transactional and corporate counsel covering real estate, inbound investment, contracts, banking coordination, and regulatory filings—from due diligence through closing.",
       primaryCta: "Book your consultation",
       secondaryCta: "Call office",
-      stats: ["+12 years experience", "+1,200 cases handled", "Fast first response"],
+      stats: ["+12 years in Panama", "Closings & registrations", "Investors & developers"],
       renderLabel: "Server-rendered page (SSR). Last update:",
     },
     metricsStrip: {
@@ -198,23 +203,82 @@ export const messages: Record<Locale, SiteMessages> = {
       ],
     },
     serviceSection: {
-      title: "Main practice areas",
-      subtitle: "Comprehensive legal support adapted to your case.",
+      headlinePrefix: "Your",
+      headlineAccent: "legal partner",
+      headlineSuffix: "for property, investment, and corporate matters in Panama.",
+      subtitle:
+        "We combine real estate, inbound investment, corporate, contracts, banking coordination, and regulatory filings—from structuring through closing.",
+      listHeading: "What we deliver",
+      ctaLabel: "Book a consultation",
+      imageAlt: "Legal advisory and professional support in Panama",
       items: [
         {
-          title: "Civil Law",
-          description:
-            "Contracts, liability, property disputes, and strategic litigation support.",
+          title: "Real Estate Transactions & Advisory",
+          points: [
+            "Review and negotiation of promise-to-purchase-and-sale agreements",
+            "Legal due diligence on properties",
+            "Structuring of acquisitions (individual or corporate)",
+            "Advisory on horizontal property and tourism-regime projects",
+            "Support through closing (notary and public registry)",
+            "Public deeds and property transfer filings",
+          ],
         },
         {
-          title: "Family Law",
-          description:
-            "Divorce, custody, support, and family agreements with sensitivity and clarity.",
+          title: "Foreign Investment & Structuring (Panama Entry)",
+          points: [
+            "Legal advisory for foreign investors in Panama",
+            "Investment structuring via local companies or foreign entities",
+            "Registration of foreign entities as branches in Panama",
+            "Asset ownership structure design",
+            "Coordination with banks, developers, and local vendors",
+          ],
         },
         {
-          title: "Consumer Law",
-          description:
-            "Protection against abusive clauses, defective services, and unfair charges.",
+          title: "Corporate & Commercial Law",
+          points: [
+            "Incorporation of companies (S.A., S.R.L.)",
+            "Bylaws and corporate agreements",
+            "Ongoing corporate legal advisory",
+            "Drafting and review of commercial contracts",
+            "Corporate reorganization and structuring",
+          ],
+        },
+        {
+          title: "Contract Drafting & Negotiation",
+          points: [
+            "Drafting and review of purchase and sale agreements",
+            "Lease agreements",
+            "Property management contracts",
+            "Commercial and civil agreements",
+            "Strategic negotiation of contract terms",
+          ],
+        },
+        {
+          title: "Banking & Transactional Legal Support",
+          points: [
+            "Assistance opening bank accounts in Panama",
+            "Legal coordination with banking institutions",
+            "Funds tracing in real estate transactions",
+            "Support in financing processes",
+          ],
+        },
+        {
+          title: "Regulatory & Government Processes",
+          points: [
+            "Filings and procedures before government agencies",
+            "Operating notice advisory and applications",
+            "Coordination with regulators (MICI, Ministry of Environment, among others)",
+            "Permits related to investment and development",
+          ],
+        },
+        {
+          title: "End-to-End Legal Support for Investors",
+          points: [
+            "Comprehensive support for investors entering Panama",
+            "Full coordination of real estate investment processes",
+            "Integration of legal, corporate, and transactional services",
+            "Follow-through through closing and post-closing",
+          ],
         },
       ],
     },
@@ -353,7 +417,7 @@ export const messages: Record<Locale, SiteMessages> = {
     footer: {
       brandTitle: "Diego Rivera Cano",
       brandDescription:
-        "Modern legal advisory for civil, family, and consumer matters in Panama.",
+        "Legal advisory in Panama for real estate, foreign investment, corporate law, contracts, banking support, and regulatory processes.",
       sections: {
         company: {
           title: "Company",
@@ -387,13 +451,13 @@ export const messages: Record<Locale, SiteMessages> = {
       news: "Noticias",
     },
     hero: {
-      badge: "Boutique legal en Ciudad de Panama",
-      title: "Acompanamiento legal estrategico para personas y empresas.",
+      badge: "Panama · Inmobiliario, inversion y societario",
+      title: "Estrategia legal para operaciones inmobiliarias, inversion extranjera y empresas.",
       description:
-        "Despacho moderno y cercano, enfocado en derecho civil, familia y consumidor, con comunicacion clara y soluciones practicas.",
+        "Asesoria transaccional y societaria: bienes raices, inversion foranea, contratos, coordinacion bancaria y tramites regulatorios, desde el due diligence hasta el cierre.",
       primaryCta: "Agendar consulta",
       secondaryCta: "Llamar ahora",
-      stats: ["+12 anos de experiencia", "+1,200 casos atendidos", "Primera respuesta rapida"],
+      stats: ["+12 anos en Panama", "Cierres y registros", "Inversionistas y desarrolladores"],
       renderLabel: "Pagina renderizada en el servidor (SSR). Ultima actualizacion:",
     },
     metricsStrip: {
@@ -430,23 +494,82 @@ export const messages: Record<Locale, SiteMessages> = {
       ],
     },
     serviceSection: {
-      title: "Areas principales de practica",
-      subtitle: "Asesoria integral adaptada a la realidad de tu caso.",
+      headlinePrefix: "Su",
+      headlineAccent: "equipo legal",
+      headlineSuffix: "para operaciones inmobiliarias, inversion y negocios en Panama.",
+      subtitle:
+        "Integramos bienes raices, inversion foranea, derecho societario, contratos, coordinacion bancaria y tramites regulatorios, desde la estructuracion hasta el cierre.",
+      listHeading: "Nuestros servicios",
+      ctaLabel: "Agendar consulta",
+      imageAlt: "Asesoria juridica y apoyo profesional en Panama",
       items: [
         {
-          title: "Derecho Civil",
-          description:
-            "Contratos, responsabilidad civil, conflictos patrimoniales y litigio estrategico.",
+          title: "Operaciones inmobiliarias y asesoria",
+          points: [
+            "Revision y negociacion de promesas de compraventa",
+            "Due diligence legal de propiedades",
+            "Estructuracion de adquisiciones (personales o corporativas)",
+            "Asesoria en proyectos bajo regimen de propiedad horizontal y regimen turistico",
+            "Acompanamiento en procesos de cierre (notaria y registro publico)",
+            "Tramitacion de escrituras publicas y transferencia de propiedad",
+          ],
         },
         {
-          title: "Derecho de Familia",
-          description:
-            "Divorcio, custodia, pension y acuerdos familiares con enfoque humano.",
+          title: "Inversion extranjera y estructuracion (entrada a Panama)",
+          points: [
+            "Asesoria legal a inversionistas extranjeros en Panama",
+            "Estructuracion de inversiones mediante sociedades locales o entidades extranjeras",
+            "Registro de sociedades extranjeras (foreign entities) como sucursales en Panama",
+            "Definicion de estructuras de titularidad de activos",
+            "Coordinacion con bancos, desarrolladores y proveedores locales",
+          ],
         },
         {
-          title: "Derecho del Consumidor",
-          description:
-            "Defensa ante clausulas abusivas, servicios defectuosos y cobros indebidos.",
+          title: "Derecho societario y mercantil",
+          points: [
+            "Constitucion de sociedades (S.A., S.R.L.)",
+            "Redaccion de pactos sociales y acuerdos corporativos",
+            "Asesoria legal corporativa continua",
+            "Elaboracion y revision de contratos comerciales",
+            "Reorganizacion y estructuracion societaria",
+          ],
+        },
+        {
+          title: "Redaccion y negociacion de contratos",
+          points: [
+            "Redaccion y revision de contratos de compraventa",
+            "Contratos de arrendamiento",
+            "Contratos de administracion de propiedades (property management)",
+            "Acuerdos comerciales y civiles",
+            "Negociacion estrategica de terminos contractuales",
+          ],
+        },
+        {
+          title: "Apoyo legal bancario y transaccional",
+          points: [
+            "Asistencia en apertura de cuentas bancarias en Panama",
+            "Coordinacion legal con entidades bancarias",
+            "Seguimiento de fondos en transacciones inmobiliarias",
+            "Soporte en procesos de financiamiento",
+          ],
+        },
+        {
+          title: "Procesos regulatorios y gubernamentales",
+          points: [
+            "Gestion de tramites ante entidades gubernamentales",
+            "Asesoria y tramitacion de avisos de operacion",
+            "Coordinacion con autoridades regulatorias (MICI, Ministerio de Ambiente, entre otros)",
+            "Gestion de permisos relacionados con inversion y desarrollo",
+          ],
+        },
+        {
+          title: "Acompanamiento legal integral para inversionistas",
+          points: [
+            "Acompanamiento integral a inversionistas desde su entrada a Panama",
+            "Coordinacion completa del proceso de inversion inmobiliaria",
+            "Integracion de servicios legales, corporativos y transaccionales",
+            "Seguimiento continuo hasta el cierre y post-cierre de la operacion",
+          ],
         },
       ],
     },
@@ -586,7 +709,7 @@ export const messages: Record<Locale, SiteMessages> = {
     footer: {
       brandTitle: "Diego Rivera Cano",
       brandDescription:
-        "Asesoria legal moderna en derecho civil, familia y consumidor en Panama.",
+        "Asesoria legal en Panama en bienes raices, inversion extranjera, derecho societario, contratos, apoyo bancario y procesos regulatorios.",
       sections: {
         company: {
           title: "Empresa",
@@ -620,13 +743,13 @@ export const messages: Record<Locale, SiteMessages> = {
       news: "Noticias",
     },
     hero: {
-      badge: "Escritorio juridico na Cidade do Panama",
-      title: "Acompanhamento juridico estrategico para pessoas e empresas.",
+      badge: "Panama · Imobiliario, investimento e societario",
+      title: "Estrategia juridica para operacoes imobiliarias, investimento estrangeiro e empresas.",
       description:
-        "Escritorio moderno e proximo, com foco em direito civil, familia e consumidor, sempre com comunicacao clara e pratica.",
+        "Assessoria transacional e societaria: imoveis, investimento inbound, contratos, coordenacao bancaria e tramites regulatorios, do due diligence ao fechamento.",
       primaryCta: "Agendar consulta",
       secondaryCta: "Ligar agora",
-      stats: ["+12 anos de experiencia", "+1.200 casos atendidos", "Primeira resposta rapida"],
+      stats: ["+12 anos no Panama", "Fechamentos e registros", "Investidores e incorporadores"],
       renderLabel: "Pagina renderizada no servidor (SSR). Ultima atualizacao:",
     },
     metricsStrip: {
@@ -663,23 +786,82 @@ export const messages: Record<Locale, SiteMessages> = {
       ],
     },
     serviceSection: {
-      title: "Principais areas de atuacao",
-      subtitle: "Assessoria completa adaptada ao contexto do seu caso.",
+      headlinePrefix: "Seu",
+      headlineAccent: "parceiro juridico",
+      headlineSuffix: "para imoveis, investimento e negocios no Panama.",
+      subtitle:
+        "Integramos imoveis, investimento internacional, direito societario, contratos, coordenacao bancaria e tramites regulatorios, da estruturacao ao fechamento.",
+      listHeading: "Nossos servicos",
+      ctaLabel: "Agendar consulta",
+      imageAlt: "Assessoria juridica e apoio profissional no Panama",
       items: [
         {
-          title: "Direito Civil",
-          description:
-            "Contratos, responsabilidade civil, conflitos patrimoniais e litigio estrategico.",
+          title: "Transacoes imobiliarias e assessoria",
+          points: [
+            "Revisao e negociacao de promessas de compra e venda",
+            "Due diligence juridica de imoveis",
+            "Estruturacao de aquisicoes (pessoais ou corporativas)",
+            "Assessoria em projetos em regime de propriedade horizontal e regime turistico",
+            "Acompanhamento em fechamentos (cartorio e registro publico)",
+            "Tramitacao de escrituras publicas e transferencia de propriedade",
+          ],
         },
         {
-          title: "Direito de Familia",
-          description:
-            "Divorcio, guarda, pensao e acordos familiares com sensibilidade.",
+          title: "Investimento estrangeiro e estruturacao (entrada no Panama)",
+          points: [
+            "Assessoria juridica a investidores estrangeiros no Panama",
+            "Estruturacao de investimentos via sociedades locais ou entidades estrangeiras",
+            "Registro de entidades estrangeiras como filiais no Panama",
+            "Definicao de estruturas de titularidade de ativos",
+            "Coordenacao com bancos, incorporadores e fornecedores locais",
+          ],
         },
         {
-          title: "Direito do Consumidor",
-          description:
-            "Defesa contra clausulas abusivas, servicos defeituosos e cobrancas indevidas.",
+          title: "Direito societario e comercial",
+          points: [
+            "Constituicao de sociedades (S.A., S.R.L.)",
+            "Redacao de pactos sociais e acordos corporativos",
+            "Assessoria juridica societaria continua",
+            "Elaboracao e revisao de contratos comerciais",
+            "Reorganizacao e estruturacao societaria",
+          ],
+        },
+        {
+          title: "Redacao e negociacao de contratos",
+          points: [
+            "Redacao e revisao de contratos de compra e venda",
+            "Contratos de locacao",
+            "Contratos de administracao de propriedades (property management)",
+            "Acordos comerciais e civis",
+            "Negociacao estrategica de termos contratuais",
+          ],
+        },
+        {
+          title: "Suporte juridico bancario e transacional",
+          points: [
+            "Assistencia na abertura de contas bancarias no Panama",
+            "Coordenacao juridica com instituicoes bancarias",
+            "Acompanhamento de fundos em transacoes imobiliarias",
+            "Suporte em processos de financiamento",
+          ],
+        },
+        {
+          title: "Processos regulatorios e governamentais",
+          points: [
+            "Gestao de tramites perante orgaos governamentais",
+            "Assessoria e tramitacao de avisos de operacao",
+            "Coordenacao com autoridades regulatorias (MICI, Ministerio de Ambiente, entre outros)",
+            "Gestao de permissoes ligados a investimento e desenvolvimento",
+          ],
+        },
+        {
+          title: "Suporte juridico ponta a ponta para investidores",
+          points: [
+            "Acompanhamento integral a investidores desde a entrada no Panama",
+            "Coordenacao completa do processo de investimento imobiliario",
+            "Integracao de servicos juridicos, corporativos e transacionais",
+            "Seguimento continuo ate o fechamento e pos-fechamento da operacao",
+          ],
         },
       ],
     },
@@ -819,7 +1001,7 @@ export const messages: Record<Locale, SiteMessages> = {
     footer: {
       brandTitle: "Diego Rivera Cano",
       brandDescription:
-        "Assessoria juridica moderna em direito civil, familia e consumidor no Panama.",
+        "Assessoria juridica no Panama em imoveis, investimento estrangeiro, direito societario, contratos, suporte bancario e processos regulatorios.",
       sections: {
         company: {
           title: "Empresa",

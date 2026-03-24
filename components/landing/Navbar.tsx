@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/landing/LanguageSwitcher";
 import type { Locale, SiteMessages } from "@/lib/i18n";
@@ -13,9 +14,19 @@ export function Navbar({ locale, t }: Props) {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href={`/${locale}`}
-          className="text-xl font-black tracking-tight text-zinc-900 transition hover:text-amber-900"
+          className="flex shrink-0 items-center transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
         >
-          DRC
+          <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full p-1">
+            <Image
+              src="/logo-rivera-cano.png"
+              alt="Rivera Cano"
+              width={44}
+              height={44}
+              className="h-full w-full object-contain"
+              sizes="44px"
+              priority
+            />
+          </span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">
           <Link href={`/${locale}`} className="hover:text-zinc-900">

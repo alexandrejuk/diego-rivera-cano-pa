@@ -7,7 +7,7 @@ type Props = {
 
 export function BenefitsSection({ t }: Props) {
   return (
-    <section className="section-reveal reveal-delay-3 mx-auto mt-10 grid w-full max-w-6xl gap-10 px-6 pb-10 md:grid-cols-2 md:pb-16">
+    <section className="section-reveal reveal-delay-3 mx-auto mt-4 grid w-full max-w-6xl gap-10 px-6 pb-10 md:grid-cols-2 md:pb-16">
       <div className="overflow-hidden rounded-4xl p-2">
         <Image
           src="/benefits-team.png"

@@ -36,13 +36,13 @@ export function HeroSection({ t, renderedAt }: Props) {
         </p>
       </div>
 
-      <div className="overflow-hidden rounded-4xl">
+      <div className="rounded-4xl">
         <Image
           src="/hero-lawyer.png"
           alt="Advogado em destaque com metricas de atendimento"
           width={900}
           height={900}
-          className="h-full w-full rounded-3xl object-cover"
+          className="h-full w-full rounded-3xl object-contain"
         />
       </div>
     </section>

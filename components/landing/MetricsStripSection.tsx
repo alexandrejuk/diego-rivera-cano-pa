@@ -90,7 +90,7 @@ export function MetricsStripSection({ t }: Props) {
   return (
     <section
       ref={sectionRef}
-      className="section-reveal reveal-delay-2 mb-20 bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 py-5"
+      className="section-reveal reveal-delay-2 mb-20 bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 py-8"
     >
       <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-center gap-4 px-6">
         {t.metricsStrip.items.map((item, index) => {
