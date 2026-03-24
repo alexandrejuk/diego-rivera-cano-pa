@@ -68,11 +68,30 @@ html {
   animation-delay: 260ms;
 }
 
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.market-ticker-track {
+  animation: ticker-scroll 36s linear infinite;
+}
+
+.market-ticker-track:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .section-reveal,
   .reveal-delay-1,
   .reveal-delay-2,
-  .reveal-delay-3 {
+  .reveal-delay-3,
+  .market-ticker-track {
     opacity: 1;
     animation: none;
   }

@@ -107,6 +107,16 @@ export type SiteMessages = {
     loadErrorRedirect: string;
     loadErrorGoNow: string;
     loadingAria: string;
+    marketSection: {
+      title: string;
+      subtitle: string;
+      followLabel: string;
+      note: string;
+    };
+    marketTicker: {
+      label: string;
+      delayedLabel: string;
+    };
   };
   systemPages: {
     notFound: {
@@ -401,6 +411,16 @@ export const messages: Record<Locale, SiteMessages> = {
       loadErrorRedirect: "Redirecting to home in {{seconds}} seconds.",
       loadErrorGoNow: "Go to home now",
       loadingAria: "Loading news",
+      marketSection: {
+        title: "Stock market snapshot",
+        subtitle: "Track key indices in real time through trusted market pages.",
+        followLabel: "Follow index",
+        note: "Informational market references only, not legal or investment advice.",
+      },
+      marketTicker: {
+        label: "US Markets",
+        delayedLabel: "Data delayed",
+      },
     },
     systemPages: {
       notFound: {
@@ -696,6 +716,16 @@ export const messages: Record<Locale, SiteMessages> = {
       loadErrorRedirect: "Redirigiendo al inicio en {{seconds}} segundos.",
       loadErrorGoNow: "Ir al inicio ahora",
       loadingAria: "Cargando noticias",
+      marketSection: {
+        title: "Resumen de bolsa",
+        subtitle: "Sigue los principales indices en tiempo real desde fuentes confiables.",
+        followLabel: "Ver indice",
+        note: "Referencia informativa de mercado; no constituye asesoria legal ni de inversion.",
+      },
+      marketTicker: {
+        label: "Mercados USA",
+        delayedLabel: "Datos con retraso",
+      },
     },
     systemPages: {
       notFound: {
@@ -991,6 +1021,16 @@ export const messages: Record<Locale, SiteMessages> = {
       loadErrorRedirect: "Redirecionando para o inicio em {{seconds}} segundos.",
       loadErrorGoNow: "Ir ao inicio agora",
       loadingAria: "Carregando noticias",
+      marketSection: {
+        title: "Resumo da bolsa",
+        subtitle: "Acompanhe os principais indices em tempo real por fontes confiaveis.",
+        followLabel: "Ver indice",
+        note: "Referencia informativa de mercado; nao constitui assessoria juridica nem de investimento.",
+      },
+      marketTicker: {
+        label: "Mercados EUA",
+        delayedLabel: "Dados com atraso",
+      },
     },
     systemPages: {
       notFound: {

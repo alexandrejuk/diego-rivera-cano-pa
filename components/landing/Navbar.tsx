@@ -17,12 +17,12 @@ export function Navbar({ locale, t }: Props) {
           href={`/${locale}`}
           className="flex shrink-0 items-center transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
         >
-          <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full p-1">
+          <span className="flex w-full h-full items-center justify-center overflow-hidden rounded-full p-1">
             <Image
               src="/logo-rivera-cano.png"
               alt="Rivera Cano"
-              width={44}
-              height={44}
+              width={52}
+              height={52}
               className="h-full w-full object-contain"
               sizes="44px"
               priority

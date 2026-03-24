@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MarketTickerBar } from "@/components/news/MarketTickerBar";
 import { NewsFeedLoader } from "@/components/news/NewsFeedLoader";
+import { StockMarketSection } from "@/components/news/StockMarketSection";
 import { isValidLocale, messages, type Locale } from "@/lib/i18n";
 
 type Props = {
@@ -81,6 +83,7 @@ export default async function NewsPage({ params }: Props) {
           </div>
         </div>
       </div>
+      <MarketTickerBar t={t} />
 
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
         <NewsFeedLoader
@@ -89,6 +92,7 @@ export default async function NewsPage({ params }: Props) {
           labels={labels}
           loadErrorCopy={loadErrorCopy}
         />
+        <StockMarketSection t={t} />
       </div>
     </main>
   );
