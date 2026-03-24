@@ -31,35 +31,45 @@ export function NewsFeedLoader({ locale, labels, loadErrorCopy }: Props) {
   const [data, setData] = useState<AggregatedNewsResult | null>(null);
   const [fetchFailed, setFetchFailed] = useState(false);
 
-  const load = useCallback(async () => {
-    setFetchFailed(false);
-    setData(null);
-    try {
-      const res = await fetch(`/api/news?limit=30`, { cache: "no-store" });
-      if (!res.ok) {
-        setFetchFailed(true);
-        return;
-      }
-      const json = (await res.json()) as unknown;
-      if (
-        !json ||
-        typeof json !== "object" ||
-        !("items" in json) ||
-        !Array.isArray((json as AggregatedNewsResult).items) ||
-        typeof (json as AggregatedNewsResult).allSourcesFailed !== "boolean"
-      ) {
-        setFetchFailed(true);
-        return;
-      }
-      setData(json as AggregatedNewsResult);
-    } catch {
-      setFetchFailed(true);
-    }
-  }, []);
-
   useEffect(() => {
-    void load();
-  }, [load]);
+    let cancelled = false;
+
+    (async () => {
+      try {
+        const res = await fetch(`/api/news?limit=30`, { cache: "no-store" });
+        if (cancelled) return;
+        if (!res.ok) {
+          setFetchFailed(true);
+          return;
+        }
+        const json = (await res.json()) as unknown;
+        if (cancelled) return;
+        if (
+          !json ||
+          typeof json !== "object" ||
+          !("items" in json) ||
+          !Array.isArray((json as AggregatedNewsResult).items)
+        ) {
+          setFetchFailed(true);
+          return;
+        }
+        const parsed = json as AggregatedNewsResult;
+        setData({
+          items: parsed.items,
+          allSourcesFailed:
+            typeof parsed.allSourcesFailed === "boolean" ? parsed.allSourcesFailed : false,
+        });
+      } catch {
+        if (!cancelled) {
+          setFetchFailed(true);
+        }
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
 
   if (data === null && !fetchFailed) {
     return <NewsFeedBodySkeleton />;
@@ -93,7 +103,7 @@ export function NewsFeedLoader({ locale, labels, loadErrorCopy }: Props) {
 
   if (news.length === 0) {
     return (
-      <div className="section-reveal rounded-2xl border border-zinc-200 bg-white px-8 py-14 text-center text-zinc-600 shadow-sm">
+      <div className="section-reveal is-visible rounded-2xl border border-zinc-200 bg-white px-8 py-14 text-center text-zinc-600 shadow-sm">
         {labels.emptyState}
       </div>
     );
@@ -103,7 +113,7 @@ export function NewsFeedLoader({ locale, labels, loadErrorCopy }: Props) {
 
   return (
     <div className="space-y-12 md:space-y-14">
-      <h2 className="section-reveal font-serif text-xl font-bold text-zinc-900 md:text-2xl">
+      <h2 className="section-reveal is-visible font-serif text-xl font-bold text-zinc-900 md:text-2xl">
         {labels.latestSectionTitle}
       </h2>
 
@@ -118,7 +128,7 @@ export function NewsFeedLoader({ locale, labels, loadErrorCopy }: Props) {
         return (
           <div key={featured.link} className="space-y-8 md:space-y-10">
             {blockHeading ? (
-              <h3 className="section-reveal border-b border-zinc-200/90 pb-3 font-serif text-lg font-bold tracking-tight text-zinc-800 md:text-xl">
+              <h3 className="section-reveal is-visible border-b border-zinc-200/90 pb-3 font-serif text-lg font-bold tracking-tight text-zinc-800 md:text-xl">
                 {blockHeading}
               </h3>
             ) : null}

@@ -83,7 +83,12 @@ export default async function NewsPage({ params }: Props) {
       </div>
 
       <div className="mx-auto max-w-6xl px-6 py-12 md:py-14">
-        <NewsFeedLoader locale={locale} labels={labels} loadErrorCopy={loadErrorCopy} />
+        <NewsFeedLoader
+          key={locale}
+          locale={locale}
+          labels={labels}
+          loadErrorCopy={loadErrorCopy}
+        />
       </div>
     </main>
   );

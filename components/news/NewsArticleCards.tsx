@@ -52,7 +52,7 @@ export function FeaturedNewsArticle({
   labels: NewsFeedLabels;
 }) {
   return (
-    <article className="section-reveal overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-md shadow-zinc-900/[0.04] ring-1 ring-black/[0.03] transition hover:shadow-lg hover:shadow-zinc-900/[0.06] md:flex md:min-h-[300px]">
+    <article className="section-reveal is-visible overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-md shadow-zinc-900/[0.04] ring-1 ring-black/[0.03] transition hover:shadow-lg hover:shadow-zinc-900/[0.06] md:flex md:min-h-[300px]">
       <div className="relative md:w-[52%]">
         <NewsThumb
           item={item}
@@ -100,7 +100,7 @@ export function FeaturedNewsArticle({
 
 export function CompactNewsCard({ item, labels }: { item: NewsItem; labels: NewsFeedLabels }) {
   return (
-    <article className="section-reveal group flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm shadow-zinc-900/[0.03] ring-1 ring-black/[0.02] transition hover:border-amber-200/60 hover:shadow-md">
+    <article className="section-reveal is-visible group flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm shadow-zinc-900/[0.03] ring-1 ring-black/[0.02] transition hover:border-amber-200/60 hover:shadow-md">
       <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
         <NewsThumb
           item={item}
