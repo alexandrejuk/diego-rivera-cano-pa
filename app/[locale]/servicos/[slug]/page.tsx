@@ -164,6 +164,23 @@ export default async function ServiceLandingPage({ params }: Props) {
         </div>
       </section>
 
+      <section className="w-full border-y border-white/10 bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-stretch gap-4 px-6 py-5 md:flex-row md:items-center md:justify-between md:gap-8 md:py-6">
+          <p className="text-center text-sm font-medium leading-relaxed text-white/95 md:text-left md:text-base">
+            {t.servicesPage.serviceWhatsappBanner}
+          </p>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 self-center rounded-full bg-amber-500 px-6 text-sm font-semibold text-zinc-900 transition hover:bg-amber-400 md:self-auto"
+          >
+            {landing.ctaButton}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <p className="max-w-3xl text-base leading-relaxed text-zinc-700 md:text-lg">
           {landing.bodyParagraph}

@@ -122,6 +122,8 @@ export type SiteMessages = {
     recommendedViewAll: string;
     recommendedViewDetails: string;
     explorePracticeAreas: string;
+    /** Full-width strip under service LP hero — invite to WhatsApp */
+    serviceWhatsappBanner: string;
   };
   serviceLandings: Record<ServiceSlug, ServiceLandingEntry>;
   newsPage: {
@@ -490,6 +492,8 @@ export const messages: Record<Locale, SiteMessages> = {
       recommendedViewAll: "View all services",
       recommendedViewDetails: "View details",
       explorePracticeAreas: "Explore practice areas",
+      serviceWhatsappBanner:
+        "Have a question about this service? Write to us on WhatsApp — we will help you clarify the next steps.",
     },
     serviceLandings: serviceLandingByLocale.en,
     newsPage: {
@@ -863,6 +867,8 @@ export const messages: Record<Locale, SiteMessages> = {
       recommendedViewAll: "Ver todos los servicios",
       recommendedViewDetails: "Ver detalles",
       explorePracticeAreas: "Ver areas de practica",
+      serviceWhatsappBanner:
+        "¿Tienes dudas sobre este servicio? Escríbenos por WhatsApp y te ayudamos a definir los próximos pasos.",
     },
     serviceLandings: serviceLandingByLocale.es,
     newsPage: {
@@ -1236,6 +1242,8 @@ export const messages: Record<Locale, SiteMessages> = {
       recommendedViewAll: "Ver todos os serviços",
       recommendedViewDetails: "Ver detalhes",
       explorePracticeAreas: "Ver áreas de atuação",
+      serviceWhatsappBanner:
+        "Tem dúvidas sobre este serviço? Fale conosco pelo WhatsApp — ajudamos a esclarecer os próximos passos.",
     },
     serviceLandings: serviceLandingByLocale.pt,
     newsPage: {
