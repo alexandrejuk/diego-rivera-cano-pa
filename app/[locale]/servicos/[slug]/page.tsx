@@ -12,7 +12,10 @@ import {
   serviceIndexFromSlug,
   type ServiceSlug,
 } from "@/lib/service-landing";
-import { buildServiceWhatsAppUrl } from "@/lib/whatsapp-contact";
+import {
+  buildServiceLandingSectionWhatsAppUrl,
+  buildServiceWhatsAppUrl,
+} from "@/lib/whatsapp-contact";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -63,6 +66,11 @@ export default async function ServiceLandingPage({ params }: Props) {
   const serviceIndex = serviceIndexFromSlug(slug);
   const serviceItem = t.serviceSection.items[serviceIndex];
   const whatsappUrl = buildServiceWhatsAppUrl(locale, serviceItem.title);
+  const sectionWhatsappUrl = buildServiceLandingSectionWhatsAppUrl(locale, {
+    serviceTitle: serviceItem.title,
+    headline: landing.headline,
+    path: `/${locale}/servicos/${slug}`,
+  });
   const heroImageSrc = SERVICE_HERO_IMAGES[slug];
   const recommendedIdxs = recommendedServiceIndices(serviceIndex, 4);
 
@@ -198,6 +206,23 @@ export default async function ServiceLandingPage({ params }: Props) {
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">{item}</p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-emerald-200/90 bg-linear-to-br from-emerald-50/70 via-white to-zinc-50/50 px-5 py-5 shadow-sm md:px-6 md:py-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
+            <p className="max-w-2xl text-sm leading-relaxed text-zinc-700 md:text-base">
+              {landing.ctaDescription}
+            </p>
+            <a
+              href={sectionWhatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#25D366] px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#20BD5A] md:self-center"
+            >
+              {landing.ctaButton}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </a>
+          </div>
         </div>
       </section>
 
