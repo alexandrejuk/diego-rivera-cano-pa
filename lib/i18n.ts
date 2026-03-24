@@ -66,6 +66,11 @@ export type SiteMessages = {
       answer: string;
     }>;
   };
+  whatsappStrip: {
+    title: string;
+    description: string;
+    buttonLabel: string;
+  };
   ctaSection: {
     title: string;
     description: string;
@@ -250,6 +255,11 @@ export const messages: Record<Locale, SiteMessages> = {
             "It depends on the type of claim and court schedule. After reviewing your case, we provide an estimated timeline.",
         },
       ],
+    },
+    whatsappStrip: {
+      title: "Need immediate legal guidance?",
+      description: "Talk to our team now via WhatsApp.",
+      buttonLabel: "Speak on WhatsApp",
     },
     ctaSection: {
       title: "Request legal orientation",
@@ -437,6 +447,11 @@ export const messages: Record<Locale, SiteMessages> = {
         },
       ],
     },
+    whatsappStrip: {
+      title: "Necesitas orientacion legal inmediata?",
+      description: "Habla ahora con nuestro equipo por WhatsApp.",
+      buttonLabel: "Hablar por WhatsApp",
+    },
     ctaSection: {
       title: "Solicita orientacion legal",
       description:
@@ -622,6 +637,11 @@ export const messages: Record<Locale, SiteMessages> = {
             "Depende do tipo de demanda e do calendario do tribunal. Apos analisar o caso, passamos uma previsao realista.",
         },
       ],
+    },
+    whatsappStrip: {
+      title: "Precisa de orientacao juridica imediata?",
+      description: "Fale agora com nossa equipe pelo WhatsApp.",
+      buttonLabel: "Falar no WhatsApp",
     },
     ctaSection: {
       title: "Solicite orientacao juridica",

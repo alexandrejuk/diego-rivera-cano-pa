@@ -51,7 +51,6 @@ export function FaqSection({ t }: Props) {
     <section className="section-reveal mx-auto w-full max-w-6xl px-6 py-14 md:py-20">
       <div className="mb-8 space-y-3">
         <h2 className="flex items-center gap-2 text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
-          <CircleHelp className="h-7 w-7 text-amber-700" />
           {t.faqSection.title}
         </h2>
         <p className="max-w-2xl text-zinc-600">{t.faqSection.subtitle}</p>

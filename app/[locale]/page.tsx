@@ -10,6 +10,7 @@ import { ProcessSection } from "@/components/landing/ProcessSection";
 import { ScrollRevealObserver } from "@/components/landing/ScrollRevealObserver";
 import { ServicesSection } from "@/components/landing/ServicesSection";
 import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { WhatsAppStripSection } from "@/components/landing/WhatsAppStripSection";
 import { isValidLocale, locales, messages, type Locale } from "@/lib/i18n";
 
 type Props = {
@@ -48,7 +49,7 @@ export default async function LocalizedHome({ params }: Props) {
       <TestimonialsSection t={t} />
       <FaqSection t={t} />
       <ContactCtaSection t={t} />
-      <FooterSection t={t} />
+      <FooterSection t={t} locale={locale} />
     </div>
   );
 }

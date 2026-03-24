@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { SiteMessages } from "@/lib/i18n";
 
 type Props = {
@@ -35,18 +36,14 @@ export function HeroSection({ t, renderedAt }: Props) {
         </p>
       </div>
 
-      <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-slate-950 via-slate-900 to-slate-800 p-8 text-white shadow-xl">
-        <div className="space-y-5">
-          {t.hero.stats.map((stat) => (
-            <div
-              key={stat}
-              className="rounded-2xl border border-white/20 bg-white/10 p-4 text-sm font-medium backdrop-blur"
-            >
-              {stat}
-            </div>
-          ))}
-        </div>
-        <div className="pointer-events-none absolute -bottom-20 -right-16 h-52 w-52 rounded-full bg-white/20 blur-2xl" />
+      <div className="overflow-hidden rounded-4xl">
+        <Image
+          src="/hero-lawyer.png"
+          alt="Advogado em destaque com metricas de atendimento"
+          width={900}
+          height={900}
+          className="h-full w-full rounded-3xl object-cover"
+        />
       </div>
     </section>
   );
