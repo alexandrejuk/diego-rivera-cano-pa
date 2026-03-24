@@ -1,0 +1,48 @@
+import type { MetadataRoute } from "next";
+
+const SITE_URL = "https://www.diego-rivera-cano-advogado.com";
+const LOCALES = ["en", "es", "pt"] as const;
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
+  const localizedPages = LOCALES.flatMap((locale) => {
+    const hrefLangs = {
+      en: `${SITE_URL}/en`,
+      es: `${SITE_URL}/es`,
+      pt: `${SITE_URL}/pt`,
+    };
+
+    return [
+      {
+        url: `${SITE_URL}/${locale}`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 1,
+        alternates: { languages: hrefLangs },
+      },
+      {
+        url: `${SITE_URL}/${locale}/servicos`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.9,
+      },
+      {
+        url: `${SITE_URL}/${locale}/noticias`,
+        lastModified: now,
+        changeFrequency: "daily" as const,
+        priority: 0.8,
+      },
+    ];
+  });
+
+  return [
+    {
+      url: SITE_URL,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    ...localizedPages,
+  ];
+}
