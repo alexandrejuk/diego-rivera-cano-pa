@@ -440,7 +440,7 @@ export const messages: Record<Locale, SiteMessages> = {
         contact: {
           title: "Contact us",
           phoneLabel: "+507 6070-0007",
-          emailLabel: "contacto@drclegal.com",
+          emailLabel: "",
         },
       },
       copyright: "Copyright 2026 Diego Rivera Cano. All rights reserved.",
@@ -735,7 +735,7 @@ export const messages: Record<Locale, SiteMessages> = {
         contact: {
           title: "Contactanos",
           phoneLabel: "+507 6070-0007",
-          emailLabel: "contacto@drclegal.com",
+          emailLabel: "",
         },
       },
       copyright: "Copyright 2026 Diego Rivera Cano. Todos los derechos reservados.",
