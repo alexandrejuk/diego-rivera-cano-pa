@@ -7,10 +7,12 @@ export const defaultLocale: Locale = "es";
 export type SiteMessages = {
   dateLocale: string;
   nav: {
+    home: string;
     services: string;
     process: string;
     testimonials: string;
     contact: string;
+    news: string;
   };
   hero: {
     badge: string;
@@ -77,6 +79,44 @@ export type SiteMessages = {
     inputPlaceholder: string;
     buttonLabel: string;
   };
+  newsPage: {
+    pageTitle: string;
+    kicker: string;
+    headline: string;
+    intro: string;
+    featuredLabel: string;
+    readOnSource: string;
+    excerptFallback: string;
+    emptyState: string;
+    backHome: string;
+    lastUpdatedLabel: string;
+    latestSectionTitle: string;
+    /** Shown above the 2nd, 3rd, … featured block; use {{n}} for the block number (2, 3, …) */
+    featuredBlockHeading: string;
+    loadErrorTitle: string;
+    loadErrorDescription: string;
+    /** Use {{seconds}} for countdown */
+    loadErrorRedirect: string;
+    loadErrorGoNow: string;
+    loadingAria: string;
+  };
+  systemPages: {
+    notFound: {
+      code: string;
+      title: string;
+      description: string;
+      cta: string;
+    };
+    error500: {
+      code: string;
+      title: string;
+      description: string;
+      /** Use {{seconds}} for countdown */
+      redirect: string;
+      goNow: string;
+      tryAgain: string;
+    };
+  };
   footer: {
     brandTitle: string;
     brandDescription: string;
@@ -107,10 +147,12 @@ export const messages: Record<Locale, SiteMessages> = {
   en: {
     dateLocale: "en-US",
     nav: {
+      home: "Home",
       services: "Services",
       process: "Process",
       testimonials: "Testimonials",
       contact: "Contact",
+      news: "News",
     },
     hero: {
       badge: "Panama City Legal Boutique",
@@ -268,6 +310,46 @@ export const messages: Record<Locale, SiteMessages> = {
       inputPlaceholder: "Enter your email",
       buttonLabel: "Request contact",
     },
+    newsPage: {
+      pageTitle: "News",
+      kicker: "Curated for you",
+      headline: "Headlines from trusted outlets",
+      intro:
+        "A professional digest of international news via RSS — updated regularly so you can scan what matters in one place.",
+      featuredLabel: "Featured",
+      readOnSource: "Read on source",
+      excerptFallback: "Open the article on the publisher site for the full story.",
+      emptyState:
+        "No articles are available right now. Please try again in a few minutes.",
+      backHome: "Back to home",
+      lastUpdatedLabel: "Page refreshed",
+      latestSectionTitle: "Latest",
+      featuredBlockHeading: "Spotlight {{n}}",
+      loadErrorTitle: "We could not load the news feeds",
+      loadErrorDescription:
+        "The RSS sources may be offline or temporarily unavailable. You will be redirected to the homepage shortly.",
+      loadErrorRedirect: "Redirecting to home in {{seconds}} seconds.",
+      loadErrorGoNow: "Go to home now",
+      loadingAria: "Loading news",
+    },
+    systemPages: {
+      notFound: {
+        code: "404",
+        title: "Page not found",
+        description:
+          "The page you are looking for does not exist or has been moved. Check the address or return to the homepage.",
+        cta: "Back to homepage",
+      },
+      error500: {
+        code: "500",
+        title: "Something went wrong",
+        description:
+          "An unexpected error occurred. You can try again or wait to be redirected to the homepage.",
+        redirect: "Redirecting to home in {{seconds}} seconds.",
+        goNow: "Go to home now",
+        tryAgain: "Try again",
+      },
+    },
     footer: {
       brandTitle: "Diego Rivera Cano",
       brandDescription:
@@ -297,10 +379,12 @@ export const messages: Record<Locale, SiteMessages> = {
   es: {
     dateLocale: "es-PA",
     nav: {
+      home: "Inicio",
       services: "Servicios",
       process: "Proceso",
       testimonials: "Testimonios",
       contact: "Contacto",
+      news: "Noticias",
     },
     hero: {
       badge: "Boutique legal en Ciudad de Panama",
@@ -459,6 +543,46 @@ export const messages: Record<Locale, SiteMessages> = {
       inputPlaceholder: "Ingresa tu correo",
       buttonLabel: "Solicitar contacto",
     },
+    newsPage: {
+      pageTitle: "Noticias",
+      kicker: "Seleccion editorial",
+      headline: "Titulares de medios reconocidos",
+      intro:
+        "Un resumen profesional de noticias internacionales a traves de RSS, actualizado con frecuencia para que sigas la actualidad en un solo lugar.",
+      featuredLabel: "Destacado",
+      readOnSource: "Leer en el medio",
+      excerptFallback: "Abre la nota en el portal del editor para el texto completo.",
+      emptyState:
+        "No hay articulos disponibles en este momento. Intenta de nuevo en unos minutos.",
+      backHome: "Volver al inicio",
+      lastUpdatedLabel: "Pagina actualizada",
+      latestSectionTitle: "Mas recientes",
+      featuredBlockHeading: "Destacado {{n}}",
+      loadErrorTitle: "No pudimos cargar las noticias",
+      loadErrorDescription:
+        "Las fuentes RSS pueden estar fuera de linea o no disponibles por un momento. En breve te llevaremos al inicio.",
+      loadErrorRedirect: "Redirigiendo al inicio en {{seconds}} segundos.",
+      loadErrorGoNow: "Ir al inicio ahora",
+      loadingAria: "Cargando noticias",
+    },
+    systemPages: {
+      notFound: {
+        code: "404",
+        title: "Pagina no encontrada",
+        description:
+          "La pagina que buscas no existe o fue movida. Revisa la direccion o vuelve al inicio.",
+        cta: "Volver al inicio",
+      },
+      error500: {
+        code: "500",
+        title: "Algo salio mal",
+        description:
+          "Ocurrio un error inesperado. Puedes reintentar o esperar la redireccion automatica al inicio.",
+        redirect: "Redirigiendo al inicio en {{seconds}} segundos.",
+        goNow: "Ir al inicio ahora",
+        tryAgain: "Intentar de nuevo",
+      },
+    },
     footer: {
       brandTitle: "Diego Rivera Cano",
       brandDescription:
@@ -488,10 +612,12 @@ export const messages: Record<Locale, SiteMessages> = {
   pt: {
     dateLocale: "pt-BR",
     nav: {
+      home: "Inicio",
       services: "Servicos",
       process: "Processo",
       testimonials: "Depoimentos",
       contact: "Contato",
+      news: "Noticias",
     },
     hero: {
       badge: "Escritorio juridico na Cidade do Panama",
@@ -650,6 +776,46 @@ export const messages: Record<Locale, SiteMessages> = {
       inputPlaceholder: "Digite seu e-mail",
       buttonLabel: "Solicitar contato",
     },
+    newsPage: {
+      pageTitle: "Noticias",
+      kicker: "Selecao editorial",
+      headline: "Manchetes de veiculos de confianca",
+      intro:
+        "Um digest profissional de noticias internacionais via RSS, atualizado com frequencia para voce acompanhar o essencial em um so lugar.",
+      featuredLabel: "Destaque",
+      readOnSource: "Ler na fonte",
+      excerptFallback: "Abra a materia no portal do veiculo para o texto completo.",
+      emptyState:
+        "Nenhuma materia disponivel no momento. Tente novamente em alguns minutos.",
+      backHome: "Voltar ao inicio",
+      lastUpdatedLabel: "Pagina atualizada",
+      latestSectionTitle: "Mais recentes",
+      featuredBlockHeading: "Destaque {{n}}",
+      loadErrorTitle: "Nao foi possivel carregar as noticias",
+      loadErrorDescription:
+        "As fontes RSS podem estar fora do ar ou indisponiveis. Voce sera redirecionado para a pagina inicial em instantes.",
+      loadErrorRedirect: "Redirecionando para o inicio em {{seconds}} segundos.",
+      loadErrorGoNow: "Ir ao inicio agora",
+      loadingAria: "Carregando noticias",
+    },
+    systemPages: {
+      notFound: {
+        code: "404",
+        title: "Pagina nao encontrada",
+        description:
+          "A pagina que voce procura nao existe ou foi movida. Confira o endereco ou volte ao inicio.",
+        cta: "Voltar ao inicio",
+      },
+      error500: {
+        code: "500",
+        title: "Algo deu errado",
+        description:
+          "Ocorreu um erro inesperado. Voce pode tentar de novo ou aguardar a redirecao automatica.",
+        redirect: "Redirecionando para o inicio em {{seconds}} segundos.",
+        goNow: "Ir ao inicio agora",
+        tryAgain: "Tentar novamente",
+      },
+    },
     footer: {
       brandTitle: "Diego Rivera Cano",
       brandDescription:
@@ -670,7 +836,7 @@ export const messages: Record<Locale, SiteMessages> = {
         contact: {
           title: "Contato",
           phoneLabel: "+507 6070-0007",
-          emailLabel: "contato@drclegal.com",
+          emailLabel: "",
         },
       },
       copyright: "Copyright 2026 Diego Rivera Cano. Todos os direitos reservados.",
@@ -680,4 +846,13 @@ export const messages: Record<Locale, SiteMessages> = {
 
 export function isValidLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
+}
+
+export function localeFromPathname(pathname: string | null): Locale {
+  if (!pathname) return defaultLocale;
+  const segment = pathname.split("/").filter(Boolean)[0];
+  if (segment && isValidLocale(segment)) {
+    return segment;
+  }
+  return defaultLocale;
 }

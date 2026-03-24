@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LanguageSwitcher } from "@/components/landing/LanguageSwitcher";
 import type { SiteMessages } from "@/lib/i18n";
 
@@ -12,7 +13,11 @@ export function FooterSection({ t, locale }: Props) {
       <div className="mx-auto w-full max-w-6xl px-6 py-12">
         <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-start">
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-black tracking-tight">{t.footer.brandTitle}</h3>
+            <h3 className="text-2xl font-black tracking-tight">
+              <Link href={`/${locale}`} className="transition hover:text-white">
+                {t.footer.brandTitle}
+              </Link>
+            </h3>
             <p className="mt-3 text-sm leading-6 text-white/90">{t.footer.brandDescription}</p>
             <div className="mt-5">
               <LanguageSwitcher locale={locale} />
@@ -23,6 +28,11 @@ export function FooterSection({ t, locale }: Props) {
             <div>
               <h4 className="text-lg font-bold">{t.footer.sections.company.title}</h4>
               <ul className="mt-3 space-y-2 text-sm text-white/90">
+                <li>
+                  <Link href={`/${locale}`} className="transition hover:text-white">
+                    {t.nav.home}
+                  </Link>
+                </li>
                 {t.footer.sections.company.links.map((item) => (
                   <li key={item}>
                     <a href="#" className="transition hover:text-white">
@@ -30,6 +40,15 @@ export function FooterSection({ t, locale }: Props) {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <Link
+                    href={`/${locale}/noticias`}
+                    prefetch={false}
+                    className="transition hover:text-white"
+                  >
+                    {t.nav.news}
+                  </Link>
+                </li>
               </ul>
             </div>
 
