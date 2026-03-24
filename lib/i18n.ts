@@ -98,6 +98,12 @@ export type SiteMessages = {
     servicesTitle: string;
     processTitle: string;
     processSubtitle: string;
+    faqTitle: string;
+    faqSubtitle: string;
+    faqItems: Array<{
+      question: string;
+      answer: string;
+    }>;
     ctaTitle: string;
     ctaDescription: string;
     ctaButton: string;
@@ -438,6 +444,25 @@ export const messages: Record<Locale, SiteMessages> = {
       servicesTitle: "Practice areas",
       processTitle: "How we deliver each engagement",
       processSubtitle: "A disciplined process from first assessment through closing and post-closing follow-up.",
+      faqTitle: "Frequently asked questions about our services",
+      faqSubtitle: "Key questions clients ask before starting a legal engagement in Panama.",
+      faqItems: [
+        {
+          question: "Do you handle only real estate matters?",
+          answer:
+            "No. We also advise on foreign investment, corporate structuring, contracts, banking coordination, and regulatory filings.",
+        },
+        {
+          question: "Can you support foreign investors before they arrive in Panama?",
+          answer:
+            "Yes. We can start legal planning remotely, define ownership structures, and prepare incorporation and registration steps in advance.",
+        },
+        {
+          question: "Do you provide end-to-end support through closing?",
+          answer:
+            "Yes. We support due diligence, contract negotiation, notary process, registry filings, and post-closing legal follow-up when needed.",
+        },
+      ],
       ctaTitle: "Need legal guidance for your case?",
       ctaDescription:
         "Speak directly with our office on WhatsApp to receive a first orientation and define next steps.",
@@ -782,6 +807,25 @@ export const messages: Record<Locale, SiteMessages> = {
       servicesTitle: "Areas de practica",
       processTitle: "Como ejecutamos cada encargo",
       processSubtitle: "Un metodo disciplinado desde la evaluacion inicial hasta el cierre y seguimiento posterior.",
+      faqTitle: "Preguntas frecuentes sobre nuestros servicios",
+      faqSubtitle: "Dudas clave antes de iniciar un acompañamiento legal en Panama.",
+      faqItems: [
+        {
+          question: "Atienden solo asuntos inmobiliarios?",
+          answer:
+            "No. Tambien asesoramos en inversion extranjera, estructura societaria, contratos, coordinacion bancaria y tramites regulatorios.",
+        },
+        {
+          question: "Pueden apoyar a inversionistas extranjeros antes de llegar a Panama?",
+          answer:
+            "Si. Podemos iniciar la planificacion legal en remoto, definir estructuras de titularidad y preparar constitucion y registros con anticipacion.",
+        },
+        {
+          question: "Acompanan todo el proceso hasta el cierre?",
+          answer:
+            "Si. Acompanamos el due diligence, la negociacion contractual, notaria, registros y el seguimiento legal posterior al cierre cuando sea necesario.",
+        },
+      ],
       ctaTitle: "Necesitas orientacion juridica para tu caso?",
       ctaDescription:
         "Habla directo con nuestra oficina por WhatsApp para recibir una primera orientacion y definir los proximos pasos.",
@@ -1126,6 +1170,25 @@ export const messages: Record<Locale, SiteMessages> = {
       servicesTitle: "Áreas de atuação",
       processTitle: "Como conduzimos cada demanda",
       processSubtitle: "Método disciplinado desde o diagnóstico inicial até o fechamento e o acompanhamento posterior.",
+      faqTitle: "Perguntas frequentes sobre nossos serviços",
+      faqSubtitle: "Dúvidas principais antes de iniciar um acompanhamento jurídico no Panamá.",
+      faqItems: [
+        {
+          question: "Vocês atendem apenas assuntos imobiliários?",
+          answer:
+            "Não. Também assessoramos investimento estrangeiro, estrutura societária, contratos, coordenação bancária e trâmites regulatórios.",
+        },
+        {
+          question: "Podem apoiar investidores estrangeiros antes da chegada ao Panamá?",
+          answer:
+            "Sim. Podemos iniciar o planejamento jurídico de forma remota, definir estruturas de titularidade e preparar constituição e registros com antecedência.",
+        },
+        {
+          question: "Vocês acompanham todo o processo até o fechamento?",
+          answer:
+            "Sim. Acompanhamos due diligence, negociação contratual, cartório, registros e o suporte jurídico pós-fechamento quando necessário.",
+        },
+      ],
       ctaTitle: "Precisa de orientação jurídica para o seu caso?",
       ctaDescription:
         "Fale diretamente com nosso escritório no WhatsApp para receber uma primeira orientação e definir os próximos passos.",

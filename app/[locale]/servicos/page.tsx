@@ -74,6 +74,12 @@ export default async function ServicesPage({ params }: Props) {
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-600 md:text-lg">
             {t.servicesPage.intro}
           </p>
+          <a
+              href="#services-contact"
+              className="my-4 inline-flex h-11 items-center justify-center rounded-full bg-zinc-900 px-5 text-sm font-semibold text-white transition hover:bg-zinc-700"
+            >
+              {t.nav.contact}
+            </a>
           <div className="mt-8">
             <Link
               href={`/${locale}`}
@@ -159,6 +165,31 @@ export default async function ServicesPage({ params }: Props) {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-12 md:py-14">
+        <div className="mb-7 space-y-2">
+          <h2 className="font-serif text-2xl font-bold tracking-tight text-zinc-900 md:text-3xl">
+            {t.servicesPage.faqTitle}
+          </h2>
+          <p className="max-w-3xl text-sm text-zinc-600 md:text-base">{t.servicesPage.faqSubtitle}</p>
+        </div>
+        <div className="space-y-3">
+          {t.servicesPage.faqItems.map((item) => (
+            <details
+              key={item.question}
+              className="group rounded-2xl border border-zinc-200/90 bg-white p-5 shadow-sm"
+            >
+              <summary className="cursor-pointer list-none text-base font-semibold text-zinc-900">
+                <span className="inline-flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-amber-500" aria-hidden />
+                  <span>{item.question}</span>
+                </span>
+              </summary>
+              <p className="pt-3 text-sm leading-relaxed text-zinc-600">{item.answer}</p>
+            </details>
+          ))}
         </div>
       </section>
 
