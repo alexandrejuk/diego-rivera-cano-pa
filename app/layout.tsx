@@ -14,6 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.diego-rivera-cano-advogado.com"),
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: "/icon.png",
+  },
   title: {
     default: "Diego Rivera Cano | Abogado",
     template: "%s | Diego Rivera Cano",
