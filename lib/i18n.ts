@@ -121,6 +121,7 @@ export type SiteMessages = {
     recommendedServicesSubtitle: string;
     recommendedViewAll: string;
     recommendedViewDetails: string;
+    explorePracticeAreas: string;
   };
   serviceLandings: Record<ServiceSlug, ServiceLandingEntry>;
   newsPage: {
@@ -488,6 +489,7 @@ export const messages: Record<Locale, SiteMessages> = {
       recommendedServicesSubtitle: "Explore related practice areas that clients often combine with this matter.",
       recommendedViewAll: "View all services",
       recommendedViewDetails: "View details",
+      explorePracticeAreas: "Explore practice areas",
     },
     serviceLandings: serviceLandingByLocale.en,
     newsPage: {
@@ -860,6 +862,7 @@ export const messages: Record<Locale, SiteMessages> = {
         "Otras areas de practica que los clientes suelen combinar con este tema.",
       recommendedViewAll: "Ver todos los servicios",
       recommendedViewDetails: "Ver detalles",
+      explorePracticeAreas: "Ver areas de practica",
     },
     serviceLandings: serviceLandingByLocale.es,
     newsPage: {
@@ -1232,6 +1235,7 @@ export const messages: Record<Locale, SiteMessages> = {
         "Outras áreas que os clientes costumam combinar com este tema.",
       recommendedViewAll: "Ver todos os serviços",
       recommendedViewDetails: "Ver detalhes",
+      explorePracticeAreas: "Ver áreas de atuação",
     },
     serviceLandings: serviceLandingByLocale.pt,
     newsPage: {
