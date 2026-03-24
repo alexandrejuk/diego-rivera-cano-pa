@@ -1,5 +1,9 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { localizedPath } from "@/lib/locale-path";
 import { type Locale } from "@/lib/i18n";
 
 type Props = {
@@ -7,6 +11,8 @@ type Props = {
 };
 
 export function LanguageSwitcher({ locale }: Props) {
+  const pathname = usePathname();
+
   const displayOrder: Locale[] = ["es", "en", "pt"];
 
   const flagByLocale: Record<Locale, { src: string; alt: string }> = {
@@ -17,26 +23,31 @@ export function LanguageSwitcher({ locale }: Props) {
 
   return (
     <div className="flex gap-2">
-      {displayOrder.map((language) => (
-        <Link
-          key={language}
-          href={`/${language}`}
-          className={`inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full border-2 transition ${
-            language === locale
-              ? "border-zinc-900 ring-2 ring-zinc-300"
-              : "border-zinc-200 hover:border-zinc-400"
-          }`}
-          aria-label={flagByLocale[language].alt}
-        >
-          <Image
-            src={flagByLocale[language].src}
-            alt={flagByLocale[language].alt}
-            width={24}
-            height={24}
-            className="h-full w-full object-cover"
-          />
-        </Link>
-      ))}
+      {displayOrder.map((language) => {
+        const href = localizedPath(pathname, language);
+
+        return (
+          <Link
+            key={language}
+            href={href}
+            className={`inline-flex h-6 w-6 items-center justify-center overflow-hidden rounded-full border-2 transition ${
+              language === locale
+                ? "border-zinc-900 ring-2 ring-zinc-300"
+                : "border-zinc-200 hover:border-zinc-400"
+            }`}
+            aria-label={flagByLocale[language].alt}
+            scroll={false}
+          >
+            <Image
+              src={flagByLocale[language].src}
+              alt={flagByLocale[language].alt}
+              width={24}
+              height={24}
+              className="h-full w-full object-cover"
+            />
+          </Link>
+        );
+      })}
     </div>
   );
 }

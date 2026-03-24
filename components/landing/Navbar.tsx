@@ -32,8 +32,8 @@ export function Navbar({ locale, t }: Props) {
         </Link>
         <NavbarDesktopNav locale={locale} t={t} />
         <div className="flex items-center gap-2">
-          <NavbarMobileNav locale={locale} t={t} />
           <LanguageSwitcher locale={locale} />
+          <NavbarMobileNav locale={locale} t={t} />
         </div>
       </div>
     </header>
