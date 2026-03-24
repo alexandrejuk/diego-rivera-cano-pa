@@ -21,13 +21,23 @@ type LoadErrorCopy = {
   goNowLabel: string;
 };
 
+type LegalCtaCopy = {
+  title: string;
+  description: string;
+  buttonLabel: string;
+};
+
 type Props = {
   locale: Locale;
   labels: NewsFeedLabels;
   loadErrorCopy: LoadErrorCopy;
+  legalCtaCopy: LegalCtaCopy;
 };
 
-export function NewsFeedLoader({ locale, labels, loadErrorCopy }: Props) {
+const WHATSAPP_URL =
+  "https://wa.me/50760700007?text=Hola%2C%20quiero%20agendar%20una%20consulta.";
+
+export function NewsFeedLoader({ locale, labels, loadErrorCopy, legalCtaCopy }: Props) {
   const [data, setData] = useState<AggregatedNewsResult | null>(null);
   const [fetchFailed, setFetchFailed] = useState(false);
 
@@ -110,6 +120,7 @@ export function NewsFeedLoader({ locale, labels, loadErrorCopy }: Props) {
   }
 
   const blocks = chunkNewsItems(news, NEWS_BLOCK_SIZE);
+  const bannerInsertIndex = blocks.length > 1 ? Math.floor(blocks.length / 2) : -1;
 
   return (
     <div className="space-y-12 md:space-y-14">
@@ -127,6 +138,29 @@ export function NewsFeedLoader({ locale, labels, loadErrorCopy }: Props) {
 
         return (
           <div key={featured.link} className="space-y-8 md:space-y-10">
+            {bannerInsertIndex === blockIndex ? (
+              <section className="section-reveal is-visible overflow-hidden rounded-2xl border border-amber-200/70 bg-linear-to-r from-amber-50 via-white to-zinc-50 p-6 shadow-sm md:p-8">
+                <div className="flex flex-col items-start justify-between gap-5 md:flex-row md:items-center">
+                  <div className="max-w-2xl space-y-2">
+                    <h3 className="font-serif text-2xl font-bold tracking-tight text-zinc-900">
+                      {legalCtaCopy.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-zinc-600 md:text-base">
+                      {legalCtaCopy.description}
+                    </p>
+                  </div>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-11 items-center justify-center rounded-full bg-zinc-900 px-6 text-sm font-semibold text-white transition hover:bg-zinc-700"
+                  >
+                    {legalCtaCopy.buttonLabel}
+                  </a>
+                </div>
+              </section>
+            ) : null}
+
             {blockHeading ? (
               <h3 className="section-reveal is-visible border-b border-zinc-200/90 pb-3 font-serif text-lg font-bold tracking-tight text-zinc-800 md:text-xl">
                 {blockHeading}

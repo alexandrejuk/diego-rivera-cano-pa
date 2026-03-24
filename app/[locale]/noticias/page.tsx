@@ -48,6 +48,11 @@ export default async function NewsPage({ params }: Props) {
     redirectTemplate: t.newsPage.loadErrorRedirect,
     goNowLabel: t.newsPage.loadErrorGoNow,
   };
+  const legalCtaCopy = {
+    title: t.newsPage.legalCtaBanner.title,
+    description: t.newsPage.legalCtaBanner.description,
+    buttonLabel: t.newsPage.legalCtaBanner.buttonLabel,
+  };
 
   return (
     <main className="w-full flex-1">
@@ -91,6 +96,7 @@ export default async function NewsPage({ params }: Props) {
           locale={locale}
           labels={labels}
           loadErrorCopy={loadErrorCopy}
+          legalCtaCopy={legalCtaCopy}
         />
         <StockMarketSection t={t} />
       </div>

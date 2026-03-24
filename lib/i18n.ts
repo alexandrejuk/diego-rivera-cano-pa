@@ -117,6 +117,23 @@ export type SiteMessages = {
       label: string;
       delayedLabel: string;
     };
+    weatherSection: {
+      title: string;
+      subtitle: string;
+      locateButton: string;
+      loading: string;
+      unsupported: string;
+      denied: string;
+      failed: string;
+      locationLabel: string;
+      todayLabel: string;
+      updatedLabel: string;
+    };
+    legalCtaBanner: {
+      title: string;
+      description: string;
+      buttonLabel: string;
+    };
   };
   systemPages: {
     notFound: {
@@ -420,6 +437,24 @@ export const messages: Record<Locale, SiteMessages> = {
       marketTicker: {
         label: "US Markets",
         delayedLabel: "Data delayed",
+      },
+      weatherSection: {
+        title: "Local weather forecast",
+        subtitle: "Allow geolocation to see the current conditions and the next days forecast.",
+        locateButton: "Use my location",
+        loading: "Loading forecast...",
+        unsupported: "Your browser does not support geolocation.",
+        denied: "Location permission denied. Enable it to view local weather.",
+        failed: "We could not load weather data for your location.",
+        locationLabel: "Location",
+        todayLabel: "Today",
+        updatedLabel: "Updated",
+      },
+      legalCtaBanner: {
+        title: "Need legal guidance for your case?",
+        description:
+          "Our team can review your situation and provide clear next steps for your legal strategy in Panama.",
+        buttonLabel: "Talk to us on WhatsApp",
       },
     },
     systemPages: {
@@ -726,6 +761,24 @@ export const messages: Record<Locale, SiteMessages> = {
         label: "Mercados USA",
         delayedLabel: "Datos con retraso",
       },
+      weatherSection: {
+        title: "Pronostico del tiempo local",
+        subtitle: "Permite geolocalizacion para ver el clima actual y el pronostico de los proximos dias.",
+        locateButton: "Usar mi ubicacion",
+        loading: "Cargando pronostico...",
+        unsupported: "Tu navegador no admite geolocalizacion.",
+        denied: "Permiso de ubicacion denegado. Activalo para ver el clima local.",
+        failed: "No pudimos cargar el clima para tu ubicacion.",
+        locationLabel: "Ubicacion",
+        todayLabel: "Hoy",
+        updatedLabel: "Actualizado",
+      },
+      legalCtaBanner: {
+        title: "Necesitas orientacion juridica para tu caso?",
+        description:
+          "Nuestro equipo puede revisar tu situacion y darte pasos concretos para definir tu estrategia legal en Panama.",
+        buttonLabel: "Hablar por WhatsApp",
+      },
     },
     systemPages: {
       notFound: {
@@ -1030,6 +1083,24 @@ export const messages: Record<Locale, SiteMessages> = {
       marketTicker: {
         label: "Mercados EUA",
         delayedLabel: "Dados com atraso",
+      },
+      weatherSection: {
+        title: "Previsao do tempo local",
+        subtitle: "Permita geolocalizacao para ver condicoes atuais e previsao dos proximos dias.",
+        locateButton: "Usar minha localizacao",
+        loading: "Carregando previsao...",
+        unsupported: "Seu navegador nao suporta geolocalizacao.",
+        denied: "Permissao de localizacao negada. Ative para ver o clima local.",
+        failed: "Nao foi possivel carregar o clima para sua localizacao.",
+        locationLabel: "Localizacao",
+        todayLabel: "Hoje",
+        updatedLabel: "Atualizado",
+      },
+      legalCtaBanner: {
+        title: "Precisa de orientacao juridica para o seu caso?",
+        description:
+          "Nossa equipe pode analisar sua situacao e indicar os proximos passos para sua estrategia juridica no Panama.",
+        buttonLabel: "Falar no WhatsApp",
       },
     },
     systemPages: {
