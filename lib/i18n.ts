@@ -1,6 +1,14 @@
+import {
+  serviceLandingByLocale,
+  type ServiceLandingEntry,
+  type ServiceSlug,
+} from "./service-landing";
+
 export const locales = ["en", "es", "pt"] as const;
 
 export type Locale = (typeof locales)[number];
+
+export type { ServiceLandingEntry, ServiceSlug };
 
 export const defaultLocale: Locale = "es";
 
@@ -93,6 +101,7 @@ export type SiteMessages = {
     headline: string;
     intro: string;
     backHome: string;
+    backToServices: string;
     highlightsTitle: string;
     highlights: string[];
     servicesTitle: string;
@@ -107,7 +116,13 @@ export type SiteMessages = {
     ctaTitle: string;
     ctaDescription: string;
     ctaButton: string;
+    heroImagePlaceholder: string;
+    recommendedServicesTitle: string;
+    recommendedServicesSubtitle: string;
+    recommendedViewAll: string;
+    recommendedViewDetails: string;
   };
+  serviceLandings: Record<ServiceSlug, ServiceLandingEntry>;
   newsPage: {
     pageTitle: string;
     kicker: string;
@@ -435,6 +450,7 @@ export const messages: Record<Locale, SiteMessages> = {
       intro:
         "We provide strategic support across real estate, corporate, contracts, and regulatory matters with execution focused on risk control and business clarity.",
       backHome: "Back to home",
+      backToServices: "All services",
       highlightsTitle: "Why clients choose our team",
       highlights: [
         "Cross-practice coordination in one legal team.",
@@ -467,7 +483,13 @@ export const messages: Record<Locale, SiteMessages> = {
       ctaDescription:
         "Speak directly with our office on WhatsApp to receive a first orientation and define next steps.",
       ctaButton: "Speak on WhatsApp",
+      heroImagePlaceholder: "Hero image — add your photo here (e.g. /service-real-estate.jpg)",
+      recommendedServicesTitle: "Recommended services",
+      recommendedServicesSubtitle: "Explore related practice areas that clients often combine with this matter.",
+      recommendedViewAll: "View all services",
+      recommendedViewDetails: "View details",
     },
+    serviceLandings: serviceLandingByLocale.en,
     newsPage: {
       pageTitle: "News",
       kicker: "Curated for you",
@@ -798,6 +820,7 @@ export const messages: Record<Locale, SiteMessages> = {
       intro:
         "Brindamos acompanamiento estrategico en operaciones inmobiliarias, societarias, contractuales y regulatorias, con foco en control de riesgo y claridad de negocio.",
       backHome: "Volver al inicio",
+      backToServices: "Todos los servicios",
       highlightsTitle: "Por que los clientes eligen nuestro equipo",
       highlights: [
         "Coordinacion legal integral en un solo despacho.",
@@ -830,7 +853,15 @@ export const messages: Record<Locale, SiteMessages> = {
       ctaDescription:
         "Habla directo con nuestra oficina por WhatsApp para recibir una primera orientacion y definir los proximos pasos.",
       ctaButton: "Hablar por WhatsApp",
+      heroImagePlaceholder:
+        "Imagen del hero — agrega tu foto aqui (p. ej. /servicio-inmobiliario.jpg)",
+      recommendedServicesTitle: "Servicios recomendados",
+      recommendedServicesSubtitle:
+        "Otras areas de practica que los clientes suelen combinar con este tema.",
+      recommendedViewAll: "Ver todos los servicios",
+      recommendedViewDetails: "Ver detalles",
     },
+    serviceLandings: serviceLandingByLocale.es,
     newsPage: {
       pageTitle: "Noticias",
       kicker: "Seleccion editorial",
@@ -1161,6 +1192,7 @@ export const messages: Record<Locale, SiteMessages> = {
       intro:
         "Oferecemos assessoria estratégica em operações imobiliárias, societárias, contratuais e regulatórias, com foco no controle de risco e na clareza para a tomada de decisão.",
       backHome: "Voltar ao início",
+      backToServices: "Todos os serviços",
       highlightsTitle: "Por que os clientes escolhem nossa equipe",
       highlights: [
         "Coordenação jurídica integrada em um único escritório.",
@@ -1193,7 +1225,15 @@ export const messages: Record<Locale, SiteMessages> = {
       ctaDescription:
         "Fale diretamente com nosso escritório no WhatsApp para receber uma primeira orientação e definir os próximos passos.",
       ctaButton: "Falar no WhatsApp",
+      heroImagePlaceholder:
+        "Imagem do hero — adicione sua foto aqui (ex.: /servico-imobiliario.jpg)",
+      recommendedServicesTitle: "Serviços recomendados",
+      recommendedServicesSubtitle:
+        "Outras áreas que os clientes costumam combinar com este tema.",
+      recommendedViewAll: "Ver todos os serviços",
+      recommendedViewDetails: "Ver detalhes",
     },
+    serviceLandings: serviceLandingByLocale.pt,
     newsPage: {
       pageTitle: "Notícias",
       kicker: "Seleção editorial",

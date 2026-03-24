@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isValidLocale, messages, type Locale } from "@/lib/i18n";
+import { SERVICE_SLUGS } from "@/lib/service-landing";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,17 +22,6 @@ const WHATSAPP_URL =
   "https://wa.me/50760700007?text=Hola%2C%20quiero%20agendar%20una%20consulta.";
 
 const SERVICE_ICONS = [Building2, Landmark, BriefcaseBusiness, FileText, Wallet, Scale, Users];
-
-function buildServiceWhatsAppUrl(locale: Locale, serviceTitle: string) {
-  const messageByLocale: Record<Locale, string> = {
-    en: `Hello, I want more information about this legal service: ${serviceTitle}.`,
-    es: `Hola, quiero mas informacion sobre este servicio legal: ${serviceTitle}.`,
-    pt: `Olá, quero mais informações sobre este serviço jurídico: ${serviceTitle}.`,
-  };
-
-  const message = messageByLocale[locale] ?? messageByLocale.es;
-  return `https://wa.me/50760700007?text=${encodeURIComponent(message)}`;
-}
 
 function getLearnMoreLabel(locale: Locale) {
   if (locale === "en") return "Learn more";
@@ -115,7 +105,7 @@ export default async function ServicesPage({ params }: Props) {
             {t.serviceSection.items.map((service, index) => {
               const Icon = SERVICE_ICONS[index % SERVICE_ICONS.length];
               const ctaLabel = getLearnMoreLabel(locale);
-              const whatsappServiceUrl = buildServiceWhatsAppUrl(locale, service.title);
+              const slug = SERVICE_SLUGS[index];
 
               return (
               <article
@@ -131,15 +121,13 @@ export default async function ServicesPage({ params }: Props) {
                 <p className="min-h-14 text-sm leading-relaxed text-zinc-600">
                   {service.points[0] ?? ""}
                 </p>
-                <a
-                  href={whatsappServiceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={`/${locale}/servicos/${slug}`}
                   className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-amber-600 transition hover:text-amber-500"
                 >
                   {ctaLabel}
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </Link>
               </article>
               );
             })}
