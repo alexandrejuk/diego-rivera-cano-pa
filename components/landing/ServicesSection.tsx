@@ -1,14 +1,13 @@
 import Image from "next/image";
-import type { SiteMessages } from "@/lib/i18n";
+import Link from "next/link";
+import type { Locale, SiteMessages } from "@/lib/i18n";
 
 type Props = {
   t: SiteMessages;
+  locale: Locale;
 };
 
-const WHATSAPP_URL =
-  "https://wa.me/50760700007?text=Hola%2C%20quiero%20agendar%20una%20consulta.";
-
-export function ServicesSection({ t }: Props) {
+export function ServicesSection({ t, locale }: Props) {
   const s = t.serviceSection;
 
   return (
@@ -50,14 +49,12 @@ export function ServicesSection({ t }: Props) {
             </ul>
           </div>
 
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/${locale}/servicos`}
             className="inline-flex h-12 items-center justify-center rounded-full bg-linear-to-r from-amber-600 to-orange-500 px-8 text-sm font-semibold text-white shadow-sm transition hover:from-amber-500 hover:to-orange-400"
           >
             {s.ctaLabel}
-          </a>
+          </Link>
         </div>
 
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">

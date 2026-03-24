@@ -38,7 +38,7 @@ export default async function LocalizedHome({ params }: Props) {
       <HeroSection t={t} renderedAt={today} />
       <MetricsStripSection t={t} />
       <BenefitsSection t={t} />
-      <ServicesSection t={t} />
+      <ServicesSection t={t} locale={locale as Locale} />
       <ProcessSection t={t} />
       <TestimonialsSection t={t} />
       <FaqSection t={t} />

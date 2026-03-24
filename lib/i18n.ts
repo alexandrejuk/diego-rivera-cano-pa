@@ -281,7 +281,7 @@ export const messages: Record<Locale, SiteMessages> = {
       subtitle:
         "We combine real estate, inbound investment, corporate, contracts, banking coordination, and regulatory filings—from structuring through closing.",
       listHeading: "What we deliver",
-      ctaLabel: "Book a consultation",
+      ctaLabel: "View all services",
       imageAlt: "Legal advisory and professional support in Panama",
       items: [
         {
@@ -653,7 +653,7 @@ export const messages: Record<Locale, SiteMessages> = {
       subtitle:
         "Integramos bienes raices, inversion foranea, derecho societario, contratos, coordinacion bancaria y tramites regulatorios, desde la estructuracion hasta el cierre.",
       listHeading: "Nuestros servicios",
-      ctaLabel: "Agendar consulta",
+      ctaLabel: "Ver todos los servicios",
       imageAlt: "Asesoria juridica y apoyo profesional en Panama",
       items: [
         {
@@ -1028,7 +1028,7 @@ export const messages: Record<Locale, SiteMessages> = {
       subtitle:
         "Integramos operações imobiliárias, investimento internacional, direito societário, contratos, coordenação bancária e trâmites regulatórios, da estruturação ao fechamento.",
       listHeading: "Nossos serviços",
-      ctaLabel: "Agendar consulta",
+      ctaLabel: "Ver todos os serviços",
       imageAlt: "Assessoria jurídica e apoio profissional no Panamá",
       items: [
         {
