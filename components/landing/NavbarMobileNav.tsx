@@ -11,6 +11,7 @@ import {
   Newspaper,
   X,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
@@ -85,7 +86,20 @@ export function NavbarMobileNav({ locale, t }: Props) {
               className="fixed inset-0 z-200 flex flex-col bg-white"
             >
               <div className="flex items-center justify-between border-b border-zinc-200 px-6 py-4">
-                <p className="text-lg font-semibold text-zinc-900">{t.nav.menuTitle}</p>
+                <Link
+                  href={`/${locale}`}
+                  onClick={close}
+                  className="flex shrink-0 items-center rounded-full p-0.5 transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
+                >
+                  <Image
+                    src="/logo-rivera-cano.png"
+                    alt={t.footer.brandTitle}
+                    width={52}
+                    height={52}
+                    className="h-12 w-12 object-contain"
+                    sizes="48px"
+                  />
+                </Link>
                 <button
                   type="button"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-zinc-800 transition hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
