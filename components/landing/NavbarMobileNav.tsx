@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useState } from "react";
 import { createPortal } from "react-dom";
+import { navMobileItemClass, useNavActiveKey } from "@/components/landing/useNavActiveKey";
 import type { Locale, SiteMessages } from "@/lib/i18n";
 
 type Props = {
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export function NavbarMobileNav({ locale, t }: Props) {
+  const active = useNavActiveKey(locale);
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const panelId = useId();
@@ -45,9 +47,6 @@ export function NavbarMobileNav({ locale, t }: Props) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open, close]);
-
-  const linkClass =
-    "block rounded-xl px-4 py-3.5 text-base font-medium text-zinc-800 transition hover:bg-zinc-100 hover:text-zinc-950";
 
   return (
     <div className="md:hidden">
@@ -83,25 +82,51 @@ export function NavbarMobileNav({ locale, t }: Props) {
                 </button>
               </div>
               <nav className="flex flex-1 flex-col overflow-y-auto px-4 py-4">
-                <Link href={`/${locale}`} className={linkClass} onClick={close}>
+                <Link
+                  href={`/${locale}`}
+                  className={navMobileItemClass(active === "home")}
+                  aria-current={active === "home" ? "page" : undefined}
+                  onClick={close}
+                >
                   {t.nav.home}
                 </Link>
-                <Link href={`/${locale}/servicos`} className={linkClass} onClick={close}>
+                <Link
+                  href={`/${locale}/servicos`}
+                  className={navMobileItemClass(active === "services")}
+                  aria-current={active === "services" ? "page" : undefined}
+                  onClick={close}
+                >
                   {t.nav.services}
                 </Link>
-                <a href={`/${locale}#process`} className={linkClass} onClick={close}>
+                <a
+                  href={`/${locale}#process`}
+                  className={navMobileItemClass(active === "process")}
+                  aria-current={active === "process" ? "true" : undefined}
+                  onClick={close}
+                >
                   {t.nav.process}
                 </a>
-                <a href={`/${locale}#testimonials`} className={linkClass} onClick={close}>
+                <a
+                  href={`/${locale}#testimonials`}
+                  className={navMobileItemClass(active === "testimonials")}
+                  aria-current={active === "testimonials" ? "true" : undefined}
+                  onClick={close}
+                >
                   {t.nav.testimonials}
                 </a>
-                <a href={`/${locale}#contact`} className={linkClass} onClick={close}>
+                <a
+                  href={`/${locale}#contact`}
+                  className={navMobileItemClass(active === "contact")}
+                  aria-current={active === "contact" ? "true" : undefined}
+                  onClick={close}
+                >
                   {t.nav.contact}
                 </a>
                 <Link
                   href={`/${locale}/noticias`}
                   prefetch={false}
-                  className={linkClass}
+                  className={navMobileItemClass(active === "news")}
+                  aria-current={active === "news" ? "page" : undefined}
                   onClick={close}
                 >
                   {t.nav.news}

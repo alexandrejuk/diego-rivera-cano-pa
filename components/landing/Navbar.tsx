@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/landing/LanguageSwitcher";
+import { NavbarDesktopNav } from "@/components/landing/NavbarDesktopNav";
 import { NavbarMobileNav } from "@/components/landing/NavbarMobileNav";
 import type { Locale, SiteMessages } from "@/lib/i18n";
 
@@ -29,30 +30,7 @@ export function Navbar({ locale, t }: Props) {
             />
           </span>
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">
-          <Link href={`/${locale}`} className="hover:text-zinc-900">
-            {t.nav.home}
-          </Link>
-          <Link href={`/${locale}/servicos`} className="hover:text-zinc-900">
-            {t.nav.services}
-          </Link>
-          <a href={`/${locale}#process`} className="hover:text-zinc-900">
-            {t.nav.process}
-          </a>
-          <a href={`/${locale}#testimonials`} className="hover:text-zinc-900">
-            {t.nav.testimonials}
-          </a>
-          <a href={`/${locale}#contact`} className="hover:text-zinc-900">
-            {t.nav.contact}
-          </a>
-          <Link
-            href={`/${locale}/noticias`}
-            prefetch={false}
-            className="hover:text-zinc-900"
-          >
-            {t.nav.news}
-          </Link>
-        </nav>
+        <NavbarDesktopNav locale={locale} t={t} />
         <div className="flex items-center gap-2">
           <NavbarMobileNav locale={locale} t={t} />
           <LanguageSwitcher locale={locale} />
