@@ -7,6 +7,8 @@ type Props = {
 };
 
 export function HeroSection({ t, renderedAt }: Props) {
+  const whatsappUrl =
+    "https://wa.me/50760700007?text=Hola%2C%20quiero%20agendar%20una%20consulta.";
   return (
     <section className="section-reveal reveal-delay-1 mx-auto grid w-full max-w-6xl gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
       <div className="space-y-6">
@@ -25,7 +27,9 @@ export function HeroSection({ t, renderedAt }: Props) {
             {t.hero.primaryCta}
           </a>
           <a
-            href="tel:+50760700007"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-300 px-6 text-sm font-semibold text-zinc-800 transition hover:border-zinc-400"
           >
             {t.hero.secondaryCta}

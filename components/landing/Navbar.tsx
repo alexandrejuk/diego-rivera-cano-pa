@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/landing/LanguageSwitcher";
+import { NavbarMobileNav } from "@/components/landing/NavbarMobileNav";
 import type { Locale, SiteMessages } from "@/lib/i18n";
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
 
 export function Navbar({ locale, t }: Props) {
   return (
-    <header className="section-reveal sticky top-0 z-20 border-b border-white/60 bg-white/85 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-white/60 bg-white/85 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href={`/${locale}`}
@@ -52,7 +53,10 @@ export function Navbar({ locale, t }: Props) {
             {t.nav.news}
           </Link>
         </nav>
-        <LanguageSwitcher locale={locale} />
+        <div className="flex items-center gap-2">
+          <NavbarMobileNav locale={locale} t={t} />
+          <LanguageSwitcher locale={locale} />
+        </div>
       </div>
     </header>
   );

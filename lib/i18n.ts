@@ -13,6 +13,9 @@ export type SiteMessages = {
     testimonials: string;
     contact: string;
     news: string;
+    menuTitle: string;
+    menuOpen: string;
+    menuClose: string;
   };
   hero: {
     badge: string;
@@ -158,6 +161,9 @@ export const messages: Record<Locale, SiteMessages> = {
       testimonials: "Testimonials",
       contact: "Contact",
       news: "News",
+      menuTitle: "Menu",
+      menuOpen: "Open menu",
+      menuClose: "Close menu",
     },
     hero: {
       badge: "Panama · Real estate, investors & corporate",
@@ -449,6 +455,9 @@ export const messages: Record<Locale, SiteMessages> = {
       testimonials: "Testimonios",
       contact: "Contacto",
       news: "Noticias",
+      menuTitle: "Menu",
+      menuOpen: "Abrir menu",
+      menuClose: "Cerrar menu",
     },
     hero: {
       badge: "Panama · Inmobiliario, inversion y societario",
@@ -741,6 +750,9 @@ export const messages: Record<Locale, SiteMessages> = {
       testimonials: "Depoimentos",
       contact: "Contato",
       news: "Noticias",
+      menuTitle: "Menu",
+      menuOpen: "Abrir menu",
+      menuClose: "Fechar menu",
     },
     hero: {
       badge: "Panama · Imobiliario, investimento e societario",
