@@ -571,7 +571,7 @@ export const messages: Record<Locale, SiteMessages> = {
       sections: {
         company: {
           title: "Company",
-          links: ["Services", "Community", "Testimonials"],
+          links: ["Community", "Testimonials"],
         },
         support: {
           title: "Support",
@@ -946,7 +946,7 @@ export const messages: Record<Locale, SiteMessages> = {
       sections: {
         company: {
           title: "Empresa",
-          links: ["Servicios", "Comunidad", "Testimonios"],
+          links: ["Comunidad", "Testimonios"],
         },
         support: {
           title: "Soporte",
@@ -1321,7 +1321,7 @@ export const messages: Record<Locale, SiteMessages> = {
       sections: {
         company: {
           title: "Empresa",
-          links: ["Serviços", "Comunidade", "Depoimentos"],
+          links: ["Comunidade", "Depoimentos"],
         },
         support: {
           title: "Suporte",

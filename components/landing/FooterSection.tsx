@@ -35,13 +35,34 @@ export function FooterSection({ t, locale }: Props) {
                     {t.nav.home}
                   </Link>
                 </li>
-                {t.footer.sections.company.links.map((item) => (
-                  <li key={item}>
-                    <a href="#" className="transition hover:text-white">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li>
+                  <Link href={`/${locale}/servicos`} className="transition hover:text-white">
+                    {t.nav.services}
+                  </Link>
+                </li>
+                {t.footer.sections.company.links.map((item) => {
+                  const isTestimonials =
+                    item === "Testimonials" || item === "Testimonios" || item === "Depoimentos";
+                  if (isTestimonials) {
+                    return (
+                      <li key={item}>
+                        <Link
+                          href={`/${locale}#testimonials`}
+                          className="transition hover:text-white"
+                        >
+                          {item}
+                        </Link>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={item}>
+                      <a href="#" className="transition hover:text-white">
+                        {item}
+                      </a>
+                    </li>
+                  );
+                })}
                 <li>
                   <Link
                     href={`/${locale}/noticias`}
