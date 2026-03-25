@@ -214,40 +214,42 @@ export default async function ServicesPage({ params }: Props) {
               const badgeClass = PRACTICE_BADGE_STYLES[index % PRACTICE_BADGE_STYLES.length];
 
               return (
-                <article
+                <Link
                   key={service.title}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                  href={`/${locale}/servicos/${slug}`}
+                  className="group block no-underline"
                 >
-                  <div className={`relative h-44 bg-linear-to-br ${backdrop}`}>
-                    {recHero ? (
-                      <Image
-                        src={recHero}
-                        alt={service.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 33vw"
-                      />
-                    ) : null}
-                    <span
-                      className={`absolute left-3 top-3 rounded-lg px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider shadow-sm ${badgeClass}`}
-                    >
-                      {landingKicker}
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-5">
-                    <h3 className="font-serif text-lg font-bold leading-snug text-zinc-900">{service.title}</h3>
-                    <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-zinc-600">
-                      {service.points[0] ?? ""}
-                    </p>
-                    <Link
-                      href={`/${locale}/servicos/${slug}`}
-                      className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 transition group-hover:text-amber-600"
-                    >
-                      {ctaLabel}
-                      <ArrowRight className="h-4 w-4" aria-hidden />
-                    </Link>
-                  </div>
-                </article>
+                  <article className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                    <div className={`relative h-44 bg-linear-to-br ${backdrop}`}>
+                      {recHero ? (
+                        <Image
+                          src={recHero}
+                          alt={service.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, 33vw"
+                        />
+                      ) : null}
+                      <span
+                        className={`absolute left-3 top-3 rounded-lg px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider shadow-sm ${badgeClass}`}
+                      >
+                        {landingKicker}
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="font-serif text-lg font-bold leading-snug text-zinc-900">
+                        {service.title}
+                      </h3>
+                      <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-zinc-600">
+                        {service.points[0] ?? ""}
+                      </p>
+                      <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 transition group-hover:text-amber-600">
+                        {ctaLabel}
+                        <ArrowRight className="h-4 w-4" aria-hidden />
+                      </div>
+                    </div>
+                  </article>
+                </Link>
               );
             })}
           </div>

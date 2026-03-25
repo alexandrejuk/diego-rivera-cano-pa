@@ -274,10 +274,12 @@ export default async function ServiceLandingPage({ params }: Props) {
             const badgeClass = RECOMMENDED_BADGE_STYLES[cardIndex % RECOMMENDED_BADGE_STYLES.length];
 
             return (
-              <article
+              <Link
                 key={recSlug}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                href={`/${locale}/servicos/${recSlug}`}
+                className="group block no-underline"
               >
+                <article className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
                 <div className={`relative h-40 bg-linear-to-br ${backdrop}`}>
                   {recHero ? (
                     <Image
@@ -309,15 +311,13 @@ export default async function ServiceLandingPage({ params }: Props) {
                   <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-zinc-600">
                     {recItem.points[0] ?? ""}
                   </p>
-                  <Link
-                    href={`/${locale}/servicos/${recSlug}`}
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 transition group-hover:text-amber-600"
-                  >
+                  <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 transition group-hover:text-amber-600">
                     {t.servicesPage.recommendedViewDetails}
                     <ArrowRight className="h-4 w-4" aria-hidden />
-                  </Link>
+                  </div>
                 </div>
-              </article>
+                </article>
+              </Link>
             );
           })}
         </div>
