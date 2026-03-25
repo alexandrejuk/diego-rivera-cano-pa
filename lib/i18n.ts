@@ -1342,6 +1342,23 @@ export const messages: Record<Locale, SiteMessages> = {
   },
 };
 
+// Normalize unicode strings to NFC.
+// Fixes cases where accents (e.g. ñ) could be rendered as "n~" due to decomposed characters.
+function normalizeDeep(value: unknown): unknown {
+  if (typeof value === "string") return value.normalize("NFC");
+  if (Array.isArray(value)) return value.map((v) => normalizeDeep(v));
+  if (value && typeof value === "object") {
+    const obj = value as Record<string, unknown>;
+    for (const [k, v] of Object.entries(obj)) {
+      obj[k] = normalizeDeep(v);
+    }
+    return obj;
+  }
+  return value;
+}
+
+normalizeDeep(messages);
+
 export function isValidLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
 }
