@@ -22,22 +22,22 @@ export const serviceLandingEs: Record<ServiceSlug, ServiceLandingEntry> = {
     faqSubtitle: "Dudas comunes de compradores, vendedores y sus asesores.",
     faqItems: [
       {
-        question: "Necesito abogado si ya tengo agente inmobiliario?",
+        question: "¿Necesito abogado si ya tengo agente inmobiliario?",
         answer:
           "El agente facilita el acuerdo comercial; el abogado revisa titulo, redacta o revisa la promesa, estructura la asignacion de riesgos y asegura que las formalidades registrales protejan su interes.",
       },
       {
-        question: "Que es el due diligence legal antes de firmar la promesa?",
+        question: "¿Qué es el due diligence legal antes de firmar la promesa?",
         answer:
           "Examinamos registros, gravamenes, anotaciones, permisos relevantes y, si aplica, vendedores societarios, para que entienda que adquiere antes de que el acuerdo le obligue.",
       },
       {
-        question: "Cuanto suele tardar el cierre?",
+        question: "¿Cuánto suele tardar el cierre?",
         answer:
           "Depende de financiamiento, requisitos del desarrollador y carga del registro. Con el alcance claro, delineamos una secuencia realista desde la promesa hasta escritura y registro.",
       },
       {
-        question: "Pueden asesorar en propiedad horizontal o regimen turistico?",
+        question: "¿Pueden asesorar en propiedad horizontal o régimen turístico?",
         answer:
           "Si. Asesoramos sobre documentacion propia de esos regimenes y paquetes de desarrollador, y coordinamos protecciones contractuales acordes a como se estructuran en la practica.",
       },
@@ -67,22 +67,22 @@ export const serviceLandingEs: Record<ServiceSlug, ServiceLandingEntry> = {
     faqSubtitle: "Estructuras, sociedades y plazos practicos.",
     faqItems: [
       {
-        question: "Podemos iniciar el trabajo legal antes de viajar a Panama?",
+        question: "¿Podemos iniciar el trabajo legal antes de viajar a Panamá?",
         answer:
           "Si. Buena parte de la estructuracion, planificacion societaria y preparacion documental puede avanzar en remoto; algunos pasos aun requieren presencia o poderes apostillados segun el caso.",
       },
       {
-        question: "Debo usar sociedad local o entidad extranjera?",
+        question: "¿Debo usar sociedad local o entidad extranjera?",
         answer:
           "Depende de su mix de activos, financiamiento, postura fiscal y expectativas de contrapartes. Recorremos escenarios y documentamos compensaciones para decidir con sus asesores fiscales y contables.",
       },
       {
-        question: "Registran sociedades extranjeras como sucursales en Panama?",
+        question: "¿Registran sociedades extranjeras como sucursales en Panamá?",
         answer:
           "Cuando el modelo encaja, acompanamos la via de registro y alineamos documentacion corporativa con requisitos operativos y bancarios locales.",
       },
       {
-        question: "Como entran los bancos en el plan?",
+        question: "¿Cómo entran los bancos en el plan?",
         answer:
           "Aplican KYC y origen de fondos. Ayudamos a anticipar solicitudes de documentos y a alinear la narrativa con evidencia contractual y registral.",
       },
@@ -112,22 +112,22 @@ export const serviceLandingEs: Record<ServiceSlug, ServiceLandingEntry> = {
     faqSubtitle: "Sociedades, documentos y necesidades continuas.",
     faqItems: [
       {
-        question: "S.A. o S.R.L.: como elegimos?",
+        question: "¿S.A. o S.R.L.: cómo elegimos?",
         answer:
           "Comparamos flexibilidad de gobierno, restricciones a la transferencia, practica bancaria habitual y costumbres del sector. La eleccion es contextual.",
       },
       {
-        question: "Ofrecen soporte tipo secretaria corporativa?",
+        question: "¿Ofrecen soporte tipo secretaría corporativa?",
         answer:
           "Si, muchos clientes nos retienen para resoluciones recurrentes, revision contractual y coordinacion notarial cuando los cambios lo requieran.",
       },
       {
-        question: "Pueden ayudar con acuerdos entre accionistas o inversionistas?",
+        question: "¿Pueden ayudar con acuerdos entre accionistas o inversionistas?",
         answer:
           "Redactamos y negociamos gobierno—transferencias, derechos de decision y salidas—coordinado con estatutos y objetivos comerciales.",
       },
       {
-        question: "Y si necesitamos reorganizar o migrar una estructura?",
+        question: "¿Y si necesitamos reorganizar o migrar una estructura?",
         answer:
           "Mapeamos pasos legales, consentimientos de terceros y registros, y ejecutamos en secuencia para reducir friccion.",
       },
@@ -157,22 +157,22 @@ export const serviceLandingEs: Record<ServiceSlug, ServiceLandingEntry> = {
     faqSubtitle: "Redaccion, revision y negociacion.",
     faqItems: [
       {
-        question: "Solo manejan contratos inmobiliarios?",
+        question: "¿Solo manejan contratos inmobiliarios?",
         answer:
           "El inmobiliario es nucleo, pero tambien apoyamos servicios, suministro, distribucion y acuerdos civiles ligados a la operacion de nuestros clientes.",
       },
       {
-        question: "Pueden revisar un contrato redactado por la otra parte?",
+        question: "¿Pueden revisar un contrato redactado por la otra parte?",
         answer:
           "Si. Entregamos redline y lista de puntos priorizados por riesgo para decidir que negociar.",
       },
       {
-        question: "Ofrecen contratos bilingues?",
+        question: "¿Ofrecen contratos bilingües?",
         answer:
           "Cuando aplica, coordinamos redaccion primero en espanol con version explicativa en ingles o estructuras paralelas para partes transfronterizas.",
       },
       {
-        question: "Como manejan un bloqueo en la negociacion?",
+        question: "¿Cómo manejan un bloqueo en la negociación?",
         answer:
           "Aislamos el punto comercial, proponemos estructuras alternativas (garantias, hitos, escrow) y documentamos acuerdos sin ambiguedad.",
       },
@@ -202,22 +202,22 @@ export const serviceLandingEs: Record<ServiceSlug, ServiceLandingEntry> = {
     faqSubtitle: "Cuentas, cumplimiento y cierres.",
     faqItems: [
       {
-        question: "El abogado puede abrirme cuenta bancaria?",
+        question: "¿El abogado puede abrirme cuenta bancaria?",
         answer:
           "No sustituimos el proceso del banco, pero organizamos documentos societarios, resoluciones y explicacion de operaciones para que la solicitud sea completa y consistente.",
       },
       {
-        question: "Por que el banco escruta compras inmobiliarias?",
+        question: "¿Por qué el banco escruta compras inmobiliarias?",
         answer:
           "Verifican origen licito de fondos y coherencia con contratos y registros. Alineamos la narrativa legal con lo que instituciones y reguladores esperan.",
       },
       {
-        question: "Trazan fondos en un cierre inmobiliario?",
+        question: "¿Trazan fondos en un cierre inmobiliario?",
         answer:
           "Si. Relacionamos hitos de pago con condiciones contractuales y el encuadre legal que el banco puede pedir para transferencias entrantes o salientes.",
       },
       {
-        question: "Trabajan con el abogado del prestamista?",
+        question: "¿Trabajan con el abogado del prestamista?",
         answer:
           "Si hay financiamiento, coordinamos entregables de cierre, opiniones cuando aplica y logisticas de firma entre partes.",
       },
@@ -247,22 +247,22 @@ export const serviceLandingEs: Record<ServiceSlug, ServiceLandingEntry> = {
     faqSubtitle: "Entes, permisos y tiempos.",
     faqItems: [
       {
-        question: "Garantizan plazos de aprobacion?",
+        question: "¿Garantizan plazos de aprobación?",
         answer:
           "Ningun abogado garantiza resultados de autoridad. Damos rangos realistas, damos seguimiento y respondemos requerimientos para avanzar el expediente.",
       },
       {
-        question: "Que es aviso de operacion y si lo necesito?",
+        question: "¿Qué es aviso de operación y si lo necesito?",
         answer:
           "Muchas actividades comerciales requieren aviso u homologo. Evaluamos su mapa de actividades y recomendamos la via con documentacion de respaldo.",
       },
       {
-        question: "Cuando interviene el Ministerio de Ambiente?",
+        question: "¿Cuándo interviene el Ministerio de Ambiente?",
         answer:
           "En proyectos con impacto ambiental o usos sensibles en ubicacion pueden exigirse instrumentos ambientales. Coordinamos estrategia legal con sus consultores ambientales.",
       },
       {
-        question: "Pueden representarnos ante reguladores?",
+        question: "¿Pueden representarnos ante reguladores?",
         answer:
           "Acompanamos en correspondencia y presentaciones permitidas por ley, siempre dentro de limites eticos y procedimentales de cada ente.",
       },
@@ -292,22 +292,22 @@ export const serviceLandingEs: Record<ServiceSlug, ServiceLandingEntry> = {
     faqSubtitle: "Alcance, comunicacion y honorarios.",
     faqItems: [
       {
-        question: "Es retainer o proyecto cerrado?",
+        question: "¿Es retainer o proyecto cerrado?",
         answer:
           "Podemos estructurar cualquiera segun previsibilidad de carga. Tras una evaluacion inicial proponemos un modelo alineado a su hoja de ruta.",
       },
       {
-        question: "Sustituyen a mis asesores fiscales o contables?",
+        question: "¿Sustituyen a mis asesores fiscales o contables?",
         answer:
           "No. Ejecutamos lo legal e integramos con sus asesores para mantener coherencia entre disciplinas.",
       },
       {
-        question: "Como comunican el avance?",
+        question: "¿Cómo comunican el avance?",
         answer:
           "Con estados claros, notas de decision y listas de chequeo para que las partes interesadas sepan que esta hecho, pendiente o bloqueado.",
       },
       {
-        question: "Hay soporte despues del cierre?",
+        question: "¿Hay soporte después del cierre?",
         answer:
           "Si: housekeeping societario, contratos con proveedores, administracion de arrendamientos y renovaciones regulatorias son necesidades comunes que seguimos atendiendo.",
       },

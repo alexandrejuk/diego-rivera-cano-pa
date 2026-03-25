@@ -1359,6 +1359,76 @@ function normalizeDeep(value: unknown): unknown {
 
 normalizeDeep(messages);
 
+// Additional Spanish orthography fixes (missing accents in common words).
+// This helps keep service landing text professional even if some sources were authored without diacritics.
+const spanishOrthographyFixes: Array<[string, string]> = [
+  ["Panama", "Panamá"],
+  ["asesoria", "asesoría"],
+  ["informacion", "información"],
+  ["negociacion", "negociación"],
+  ["tramites", "trámites"],
+  ["juridica", "jurídica"],
+  ["revision", "revisión"],
+  ["titulo", "título"],
+  ["operacion", "operación"],
+  ["coordinacion", "coordinación"],
+  ["inversion", "inversión"],
+  ["foranea", "foránea"],
+  ["proximos", "próximos"],
+  ["raices", "raíces"],
+  ["publico", "público"],
+  ["publicas", "públicas"],
+  ["estructuracion", "estructuración"],
+  ["planificacion", "planificación"],
+  ["documentacion", "documentación"],
+  ["acompanamiento", "acompañamiento"],
+  ["acompanamos", "acompañamos"],
+  ["Acompanamiento", "Acompañamiento"],
+  ["Acompanamos", "Acompañamos"],
+  ["Acompañamiento", "Acompañamiento"],
+  ["detecion", "detección"],
+  ["Deteccion", "Detección"],
+  ["gravamenes", "gravámenes"],
+  ["terminos", "términos"],
+  ["practica", "práctica"],
+  ["logica", "lógica"],
+  ["regimenes", "regímenes"],
+  ["regimen", "régimen"],
+  ["turistico", "turístico"],
+  ["gravamenes", "gravámenes"],
+  ["proximos", "próximos"],
+  ["despues", "después"],
+  ["gestion", "gestión"],
+  ["Gestion", "Gestión"],
+  ["Estructuracion", "Estructuración"],
+  ["Planificacion", "Planificación"],
+  ["Acompan", "Acompañ"], // safety net (covers “Acompan…” → “Acompañ…”)
+];
+
+function fixSpanishOrthography(value: unknown): unknown {
+  if (typeof value === "string") {
+    let out = value;
+    for (const [from, to] of spanishOrthographyFixes) {
+      out = out.split(from).join(to);
+    }
+    return out;
+  }
+  if (Array.isArray(value)) return value.map((v) => fixSpanishOrthography(v));
+  if (value && typeof value === "object") {
+    const obj = value as Record<string, unknown>;
+    for (const [k, v] of Object.entries(obj)) {
+      obj[k] = fixSpanishOrthography(v);
+    }
+    return obj;
+  }
+  return value;
+}
+
+// Only apply to the Spanish locale.
+if (messages.es) {
+  fixSpanishOrthography(messages.es);
+}
+
 export function isValidLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
 }
